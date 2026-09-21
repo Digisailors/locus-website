@@ -181,3 +181,57 @@
   .sol-steps { grid-template-columns: 1fr; }
   .sol-hero { padding-bottom: 104px; }
 }
+
+/* ===== Menu close animation ===== */
+.mega-wrap.is-closing .mega { animation: megaOut 200ms cubic-bezier(.4, 0, 1, 1) both; pointer-events: none; }
+.mega-backdrop.is-closing { animation: megaFadeOut 200ms ease both; pointer-events: none; }
+.mega-wrap.is-closing .mega-card, .mega-wrap.is-closing li { animation: none; opacity: 1; }
+@keyframes megaOut { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-10px); } }
+@keyframes megaFadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+/* ===== Solution page: split sections, who, apps, FAQ ===== */
+.sol-split { padding: 80px 0; }
+.sol-split__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.sol-split--flip .sol-split__text { order: 2; }
+.sol-split__text h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.04em; color: var(--color-primary-navy); margin: 12px 0 16px; font-weight: 700; }
+.sol-split__text p { font-size: 1.08rem; margin: 0; }
+.sol-split__panel { position: relative; aspect-ratio: 1 / .8; border-radius: 28px; overflow: hidden; display: grid; place-items: center; background-color: #fff; border: 1px solid var(--color-border-default); box-shadow: var(--shadow-2);
+  background-image: linear-gradient(rgba(34,197,94,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,.09) 1px, transparent 1px); background-size: 34px 34px; transition: transform 400ms ease, box-shadow 400ms ease; }
+.sol-split__panel:hover { transform: translateY(-6px) scale(1.01); box-shadow: var(--shadow-3); }
+.sol-split__icon { width: 84px; height: 84px; padding: 20px; border-radius: 24px; background: var(--color-accent-bright); color: var(--color-primary-navy); box-shadow: 0 14px 40px rgba(34,197,94,.35); animation: solFloat 4s ease-in-out infinite; }
+.sol-split__bars { position: absolute; left: 8%; right: 8%; bottom: 0; height: 34%; display: flex; align-items: flex-end; gap: 4%; }
+.sol-split__bars i { flex: 1; border-radius: 10px 10px 0 0; background: linear-gradient(180deg, #86efac, #22c55e); transform-origin: bottom; animation: barGrow 2.6s ease-in-out infinite; }
+.sol-split__bars i:nth-child(1) { height: 45%; } .sol-split__bars i:nth-child(2) { height: 80%; animation-delay: .2s; } .sol-split__bars i:nth-child(3) { height: 60%; animation-delay: .4s; } .sol-split__bars i:nth-child(4) { height: 100%; animation-delay: .6s; } .sol-split__bars i:nth-child(5) { height: 70%; animation-delay: .8s; }
+@keyframes barGrow { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.65); } }
+.sol-split__stat { position: absolute; top: 18px; left: 18px; display: flex; flex-direction: column; padding: 12px 18px; border-radius: 16px; background: var(--color-primary-navy); color: #fff; }
+.sol-split__stat strong { font-size: 1.8rem; line-height: 1; color: var(--color-accent-bright); letter-spacing: -0.03em; }
+.sol-split__stat span { font-size: .75rem; margin-top: 4px; color: rgba(255,255,255,.75); }
+
+.sol-who { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.sol-who ul { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.sol-who li { padding: 12px 24px; border-radius: 99px; background: #fff; border: 1px solid var(--color-border-default); font-weight: 600; color: var(--color-primary-navy); transition: transform 200ms, background 200ms, border-color 200ms; }
+.sol-who li:hover { transform: translateY(-3px); background: var(--color-accent-bright); border-color: var(--color-accent-bright); }
+
+.sol-apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.sol-app { padding: 32px; border-radius: 24px; background: #fff; border: 1px solid var(--color-border-default); transition: transform 260ms, box-shadow 260ms, border-color 260ms; }
+.sol-app:hover { transform: translateY(-8px); box-shadow: var(--shadow-2); border-color: var(--color-accent-cyan); }
+.sol-app__icon { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--color-surface-mint); color: #169447; margin-bottom: 20px; }
+.sol-app__icon svg { width: 26px; height: 26px; }
+.sol-app h3 { font-size: 1.25rem; color: var(--color-primary-navy); margin: 0 0 10px; }
+.sol-app p { margin: 0; font-size: .95rem; }
+
+.sol-faqs { max-width: 860px; }
+.sol-faq { border-bottom: 1px solid var(--color-border-default); }
+.sol-faq button { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; border: 0; background: transparent; cursor: pointer; text-align: left; font: inherit; font-size: 1.15rem; font-weight: 600; color: var(--color-primary-navy); }
+.sol-faq button svg { flex: none; transition: transform 300ms ease; color: #169447; }
+.sol-faq.is-open button svg { transform: rotate(45deg); }
+.sol-faq__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms ease; }
+.sol-faq.is-open .sol-faq__body { grid-template-rows: 1fr; }
+.sol-faq__body > div { overflow: hidden; }
+.sol-faq__body p { margin: 0 0 24px; }
+
+@media (max-width: 960px) {
+  .sol-split__grid, .sol-who { grid-template-columns: 1fr; gap: 36px; }
+  .sol-split--flip .sol-split__text { order: 0; }
+  .sol-apps { grid-template-columns: 1fr; }
+}

@@ -44,12 +44,24 @@ export default function Navigation({ currentPath }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<MenuKey | null>(null)
   const [mobileOpen, setMobileOpen] = useState<MenuKey | null>(null)
+  const [shown, setShown] = useState<MenuKey | null>(null)
+  const [closing, setClosing] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout>>()
+  const unmountTimer = useRef<ReturnType<typeof setTimeout>>()
   const router = useRouter()
 
   const openMega = (key: MenuKey) => { clearTimeout(closeTimer.current); setOpenMenu(key) }
   const scheduleClose = () => { clearTimeout(closeTimer.current); closeTimer.current = setTimeout(() => setOpenMenu(null), 140) }
   const closeAll = () => { setOpenMenu(null); setMobileMenuOpen(false) }
+
+  // Keep the panel mounted while it plays its closing animation
+  useEffect(() => {
+    clearTimeout(unmountTimer.current)
+    if (openMenu) { setShown(openMenu); setClosing(false); return }
+    setClosing(true)
+    unmountTimer.current = setTimeout(() => { setShown(null); setClosing(false) }, 200)
+    return () => clearTimeout(unmountTimer.current)
+  }, [openMenu])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpenMenu(null) }
@@ -146,12 +158,14 @@ export default function Navigation({ currentPath }: NavigationProps) {
       </div>
 
       {/* Mega menus (desktop) */}
-      {openMenu && (
+      {shown && (
         <div className="hidden md:block">
-          <div className="mega-backdrop" onClick={() => setOpenMenu(null)} aria-hidden="true" />
-          {openMenu === 'discover' && <DiscoverMegaMenu onNavigate={closeAll} />}
-          {openMenu === 'solutions' && <SolutionsMegaMenu onNavigate={closeAll} />}
-          {openMenu === 'resources' && <ResourcesMegaMenu onNavigate={closeAll} />}
+          <div className={`mega-backdrop ${closing ? 'is-closing' : ''}`} onClick={() => setOpenMenu(null)} aria-hidden="true" />
+          <div className={closing ? 'mega-wrap is-closing' : 'mega-wrap'}>
+            {shown === 'discover' && <DiscoverMegaMenu onNavigate={closeAll} />}
+            {shown === 'solutions' && <SolutionsMegaMenu onNavigate={closeAll} />}
+            {shown === 'resources' && <ResourcesMegaMenu onNavigate={closeAll} />}
+          </div>
         </div>
       )}
 
