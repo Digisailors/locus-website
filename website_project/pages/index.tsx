@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import HeroSection from '../components/HeroSection'
-import FeaturesSection from '../components/FeaturesSection'
+import HomeCarousel from '../components/HomeCarousel'
+import HomeSections from '../components/HomeSections'
 import CTABanner from '../components/CTABanner'
-import StatsSection from '../components/StatsSection'
 
 export default function HomePage() {
   return (
@@ -13,11 +12,10 @@ export default function HomePage() {
       </Head>
 
       <div className="bg-surface-neutral">
-        <HeroSection />
-        <StatsSection />
-        <FeaturesSection />
-        <CTABanner 
-          title="Ready to Transform Your Space?" 
+        <HomeCarousel />
+        <HomeSections />
+        <CTABanner
+          title="Ready to Transform Your Space?"
           description="Join thousands of enterprises that have turned their buildings into smart spaces."
           buttonText="Request Demo"
           buttonHref="/contact"
