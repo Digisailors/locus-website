@@ -9,12 +9,12 @@ module.exports = {
     extend: {
       colors: {
         // Locus Edge Design System from PDF - FIXED
-        'primary-navy': '#18181B',       // Dark slate for text/headings (was charcoal-grey)
+        'primary-navy': '#0B1F33',
         'accent-cyan': '#22C55E',        // Vibrant lime-green for accents
-        'canvas-bone': '#EBEBE6',          // Warm bone for backgrounds
+        'canvas-bone': '#F3F6F2',
         'active-green': '#22C55E',         // Active pill green
-        'charcoal-grey': '#5C5E6E',       // Medium grey for secondary text
-        'surface-cool': '#E8F7EC',        // Soft green surface
+        'charcoal-grey': '#526170',
+        'surface-cool': '#E7F7EB',
         'attention-amber': '#FEF3C7',      // Attention amber
         'pure-white': '#FFFFFF',            // Pure white for cards
         success: '#22C55E',
@@ -22,20 +22,20 @@ module.exports = {
         error: '#EF4444',
         info: '#3B82F6',
         'surface-base': '#FFFFFF',
-        'surface-neutral': '#EBEBE6',      // Warm bone background
-        'border-default': '#D1D5DB',
-        'dark-canvas': '#18181B',
+        'surface-neutral': '#F3F6F2',
+        'border-default': '#DCE4DF',
+        'dark-canvas': '#0B1F33',
       },
       fontFamily: {
-        display: ['Montserrat', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Inter', 'Segoe UI', 'Arial', 'sans-serif'],
+        body: ['Inter', 'Segoe UI', 'Arial', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontSize: {
-        'display-1': ['48px', { lineHeight: '1.2', fontWeight: '700' }],
-        'h1': ['32px', { lineHeight: '1.3', fontWeight: '600' }],
-        'h2': ['24px', { lineHeight: '1.4', fontWeight: '600' }],
-        'h3': ['20px', { lineHeight: '1.4', fontWeight: '500' }],
+        'display-1': ['72px', { lineHeight: '1', fontWeight: '600' }],
+        'h1': ['52px', { lineHeight: '1.1', fontWeight: '600' }],
+        'h2': ['32px', { lineHeight: '1.2', fontWeight: '600' }],
+        'h3': ['20px', { lineHeight: '1.35', fontWeight: '600' }],
         'body-lg': ['18px', { lineHeight: '1.5' }],
         'body': ['16px', { lineHeight: '1.5' }],
         'body-sm': ['14px', { lineHeight: '1.5' }],
@@ -54,12 +54,12 @@ module.exports = {
       borderRadius: {
         'sm': '4px',
         'md': '8px',
-        'lg': '16px',
+        'lg': '24px',
       },
       boxShadow: {
-        '1': '0 1px 3px rgba(0, 31, 92, 0.05)',
-        '2': '0 4px 12px rgba(0, 31, 92, 0.08)',
-        '3': '0 12px 28px rgba(0, 31, 92, 0.12)',
+        '1': '0 1px 2px rgba(11,31,51,.04), 0 8px 24px rgba(11,31,51,.04)',
+        '2': '0 16px 44px rgba(11,31,51,.10)',
+        '3': '0 24px 70px rgba(11,31,51,.16)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

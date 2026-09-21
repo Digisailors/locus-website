@@ -19,10 +19,10 @@ export default function Navigation({ currentPath }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-white border-b border-border-default py-4 px-8 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="site-nav" aria-label="Primary navigation">
+      <div className="site-nav__inner">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="site-nav__brand flex items-center gap-3" aria-label="Locus Spatial Intelligence home">
           <img 
             src="/images/logo.png" 
             alt="Logo" 
@@ -34,17 +34,17 @@ export default function Navigation({ currentPath }: NavigationProps) {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="site-nav__links hidden md:flex">
           {navLinks.map((link) => {
             const isActive = currentPath === link.href
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`site-nav__link ${
                   isActive 
-                    ? 'bg-accent-cyan/10 text-accent-cyan' 
-                    : 'text-charcoal-grey hover:text-primary-navy hover:bg-surface-neutral'
+                    ? 'site-nav__link--active'
+                    : ''
                 }`}
               >
                 {link.label}
@@ -61,9 +61,13 @@ export default function Navigation({ currentPath }: NavigationProps) {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden p-2"
+        <button
+          type="button"
+          className="site-nav__menu-button md:hidden p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation"
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
         >
           {mobileMenuOpen ? (
             <X className="w-6 h-6 text-primary-navy" />
@@ -75,7 +79,7 @@ export default function Navigation({ currentPath }: NavigationProps) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-4 pb-4 border-t border-border-default pt-4">
+        <div id="mobile-navigation" className="site-nav__mobile md:hidden">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => {
               const isActive = currentPath === link.href
@@ -83,10 +87,10 @@ export default function Navigation({ currentPath }: NavigationProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`site-nav__link ${
                     isActive 
-                      ? 'bg-accent-cyan/10 text-accent-cyan' 
-                      : 'text-charcoal-grey hover:text-primary-navy hover:bg-surface-neutral'
+                      ? 'site-nav__link--active'
+                      : ''
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >

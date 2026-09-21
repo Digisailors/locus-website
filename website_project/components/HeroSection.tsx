@@ -11,23 +11,23 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-surface-neutral overflow-hidden">
+    <section className="locus-hero relative min-h-screen bg-surface-neutral overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
         <SpatialCanvas />
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-neutral/80 via-surface-neutral/60 to-surface-neutral z-10" />
+      <div className="locus-hero__overlay absolute inset-0 bg-gradient-to-b from-surface-neutral/80 via-surface-neutral/60 to-surface-neutral z-10" />
 
       {/* Hero Content */}
-      <div className="relative z-20 px-8 pt-20 pb-32">
+      <div className="locus-hero__content relative z-20 px-8 pt-20 pb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="locus-hero__grid grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8 transition-all duration-1000">
+            <div className="locus-hero__copy space-y-8 transition-all duration-1000">
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-cyan/10 rounded-full">
+              <div className="locus-hero__eyebrow inline-flex items-center gap-2 px-4 py-2 bg-accent-cyan/10 rounded-full">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
                 <span className="text-caption text-accent-cyan font-medium uppercase tracking-wider">
                   Spatial Intelligence Platform
@@ -47,7 +47,7 @@ export default function HeroSection() {
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-4">
+              <div className="locus-hero__stats grid grid-cols-3 gap-6 pt-4">
                 <div className="text-center">
                   <div className="text-h2 text-primary-navy font-display font-bold">99.9%</div>
                   <div className="text-body-sm text-charcoal-grey">Accuracy</div>
@@ -79,7 +79,7 @@ export default function HeroSection() {
             </div>
 
             {/* Right Content - Feature Cards */}
-            <div className="relative space-y-4 transition-all duration-1000 delay-300">
+            <div className="locus-hero__cards relative space-y-4 transition-all duration-1000 delay-300">
               {/* Floating Cards */}
               <div className="space-y-4">
                 {/* Card 1 */}
