@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react'
 import { discover } from '../data/info'
 
 export default function DiscoverMegaMenu({ onNavigate }: { onNavigate: () => void }) {
-  const [active, setActive] = useState(2) // Cisco opens on the apps item
+  const [active, setActive] = useState(0)
   const current = discover[active]
 
   return (
@@ -26,13 +26,24 @@ export default function DiscoverMegaMenu({ onNavigate }: { onNavigate: () => voi
           ))}
         </ul>
 
-        <div className="dmenu__panel" key={current.slug}>
-          <h3>{current.summary}</h3>
-          <p>{current.description}</p>
-          <Link href={`/discover/${current.slug}`} onClick={onNavigate} className="dmenu__btn">
-            {(current.cta ?? 'Explore now').toUpperCase()}
+        {current.banner ? (
+          <Link href={`/discover/${current.slug}`} onClick={onNavigate} className="dmenu__banner" key={current.slug}>
+            <span className="dmenu__banner-glow" aria-hidden="true" />
+            <span className="dmenu__banner-logo"><img src="/images/logo.png" alt="" /></span>
+            <span className="dmenu__banner-copy">
+              <h3>{current.banner}</h3>
+              <span className="dmenu__banner-btn">See How</span>
+            </span>
           </Link>
-        </div>
+        ) : (
+          <div className="dmenu__panel" key={current.slug}>
+            <h3>{current.summary}</h3>
+            <p>{current.description}</p>
+            <Link href={`/discover/${current.slug}`} onClick={onNavigate} className="dmenu__btn">
+              {(current.cta ?? 'Explore now').toUpperCase()}
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   )

@@ -11,6 +11,8 @@ export interface InfoPageData {
   bullets: string[]
   isNew?: boolean
   cta?: string
+  /** Discover menu: show a dark banner card with this headline instead of the text panel */
+  banner?: string
 }
 
 const h = (title: string, description: string) => ({ title, description })
@@ -18,7 +20,7 @@ const h = (title: string, description: string) => ({ title, description })
 // ---------------- Discover Spaces ----------------
 export const discover: InfoPageData[] = [
   {
-    slug: 'why-locus', group: 'discover', title: 'Why Locus', icon: 'Compass',
+    slug: 'why-locus', group: 'discover', banner: 'Your network as a sensor for smart spaces', title: 'Why Locus', icon: 'Compass',
     summary: 'The case for spatial intelligence',
     description: 'Buildings hold more data than any team can see. Locus turns the wireless network you already own into a live picture of people, devices and space, so every decision starts from what is really happening.',
     highlights: [
@@ -30,7 +32,7 @@ export const discover: InfoPageData[] = [
     cta: 'Explore now',
   },
   {
-    slug: 'locus-platform', group: 'discover', title: 'Locus Platform', icon: 'Layers',
+    slug: 'locus-platform', group: 'discover', banner: 'The ultimate platform for smart spaces', title: 'Locus Platform', icon: 'Layers',
     summary: 'The cloud engine behind every location',
     description: 'A single cloud platform that ingests signals from Wi-Fi, BLE and UWB, resolves them into accurate positions and exposes them as maps, analytics, alerts and APIs.',
     highlights: [
@@ -54,7 +56,7 @@ export const discover: InfoPageData[] = [
     cta: 'Explore now',
   },
   {
-    slug: 'experience-locus', group: 'discover', title: 'Experience Locus', icon: 'PlayCircle',
+    slug: 'experience-locus', group: 'discover', banner: 'Experience smart space, day in the life', title: 'Experience Locus', icon: 'PlayCircle',
     summary: 'See it working before you commit',
     description: 'Walk through persona-based journeys, try the product tour and talk to specialists in a live environment that shows what Locus does in a space like yours.',
     highlights: [
@@ -66,7 +68,7 @@ export const discover: InfoPageData[] = [
     cta: 'Request a demo',
   },
   {
-    slug: 'packages', group: 'discover', title: 'Packages', icon: 'Package',
+    slug: 'packages', group: 'discover', banner: 'Packages for every workplace', title: 'Packages', icon: 'Package',
     summary: 'Start small, scale to every site',
     description: 'Simple packages that match how far along you are, from a pilot in a single building to a global rollout with premium support.',
     highlights: [

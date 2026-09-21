@@ -1,11 +1,20 @@
+import Head from 'next/head'
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import InfoPage from '../../components/InfoPage'
+import DiscoverPage from '../../components/DiscoverPages'
 import { discover, findInfo } from '../../data/info'
 
-export default function DiscoverPage({ slug }: { slug: string }) {
+export default function Discover({ slug }: { slug: string }) {
   const page = findInfo('discover', slug)
   if (!page) return null
-  return <InfoPage page={page} siblings={discover} sectionLabel="Discover Spaces" sectionHref="/discover" />
+  return (
+    <>
+      <Head>
+        <title>{`${page.title} | Locus`}</title>
+        <meta name="description" content={page.description} />
+      </Head>
+      <DiscoverPage slug={slug} />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => ({
