@@ -19,12 +19,8 @@ type NavLink = { href: string; label: string; menu?: MenuKey }
 const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/discover', label: 'Discover Spaces', menu: 'discover' },
-  { href: '/platform', label: 'Platform' },
   { href: '/solutions', label: 'Solutions', menu: 'solutions' },
   { href: '/resources', label: 'Resources', menu: 'resources' },
-  { href: '/industries', label: 'Industries' },
-  { href: '/technology', label: 'Technology' },
-  { href: '/use-cases', label: 'Use Cases' },
 ]
 
 type MobileSection = { heading: string; items: { href: string; label: string }[] }

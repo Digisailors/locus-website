@@ -216,7 +216,7 @@ function Building({ kind }: { kind: 'office' | 'hospital' | 'mall' }) {
   )
 }
 
-function Experience() {
+export function Experience() {
   const tiles = [
     { kind: 'office' as const, title: 'Workplace', href: '/solutions/workspaces', cls: 'a' },
     { kind: 'hospital' as const, title: 'Healthcare', href: '/solutions/healthcare', cls: 'b' },
