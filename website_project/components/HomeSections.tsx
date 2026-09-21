@@ -234,10 +234,10 @@ function Stories() {
 
 /* ---------- Latest resources ---------- */
 const latest = [
-  { tag: 'Webinar', title: 'Smart Spaces Starts Here', date: 'September 21, 2026', href: '/resources/webinars', tone: 'a' },
-  { tag: 'Articles / Blogs', title: 'Beyond Guest Wi-Fi: What You Can Actually Do with Locus Captive Portal', date: 'September 7, 2026', href: '/resources/blogs', tone: 'b' },
-  { tag: 'On-demand webinar', title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', date: 'September 7, 2026', href: '/resources/webinars', tone: 'c' },
-  { tag: 'Articles / Blogs', title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', date: 'July 24, 2026', href: '/resources/blogs', tone: 'd' },
+  { tag: 'Webinar', title: 'Smart Spaces Starts Here', date: 'September 21, 2026', href: '/resources/webinars', img: '/images/cards/webinar.svg', tone: 'a' },
+  { tag: 'Articles / Blogs', title: 'Beyond Guest Wi-Fi: What You Can Actually Do with Locus Captive Portal', date: 'September 7, 2026', href: '/resources/blogs', img: '/images/cards/guest.svg', tone: 'b' },
+  { tag: 'On-demand webinar', title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', date: 'September 7, 2026', href: '/resources/webinars', img: '/images/cards/laptop.svg', tone: 'c' },
+  { tag: 'Articles / Blogs', title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', date: 'July 24, 2026', href: '/resources/blogs', img: '/images/cards/asset.svg', tone: 'd' },
 ]
 
 function Latest() {
@@ -249,7 +249,7 @@ function Latest() {
           {latest.map((r, i) => (
             <motion.div key={r.title} {...reveal} transition={{ ...reveal.transition, delay: i * 0.08 }}>
               <Link href={r.href} className="cs-res">
-                <div className={`cs-res__media t-${r.tone}`}><span>{r.tag}</span></div>
+                <div className={`cs-res__media t-${r.tone}`}><img src={r.img} alt="" loading="lazy" /><span>{r.tag}</span></div>
                 <h3>{r.title}</h3>
                 <p>{r.date}</p>
               </Link>
@@ -268,7 +268,7 @@ const outcomes = [
   ['Contact Tracing', '/solutions/detect-locate'], ['Location Analytics', '/solutions/location-analytics'],
   ['Asset Tracking', '/solutions/asset-tracking'], ['Density Monitoring', '/solutions/density-monitoring'],
   ['Indoor Navigation', '/solutions/indoor-navigation'], ['Detect & Locate', '/solutions/detect-locate'],
-  ['Contactless Experience', '/solutions/guest-wifi-onboarding'], ['Smart Healthcare', '/solutions/smart-healthcare'],
+  ['Contactless Experience', '/solutions/contextual-engagements'], ['Smart Healthcare', '/solutions/smart-healthcare'],
 ]
 
 function Outcomes() {

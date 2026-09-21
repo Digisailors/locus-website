@@ -16,18 +16,18 @@ type Kind = 'Webinar' | 'On-demand webinar' | 'Articles / Blogs' | 'Case Study'
 interface Item { title: string; kind: Kind; date: string; industry: string; tone: 'a' | 'b' | 'c' | 'd'; img?: string; tags: string[] }
 
 export const items: Item[] = [
-  { title: 'Smart Spaces Starts Here', kind: 'Webinar', date: 'September 21, 2026', industry: 'General', tone: 'a', tags: ['smart workspaces'] },
-  { title: 'Beyond Guest Wi-Fi: What You Can Actually Do with the Locus Captive Portal', kind: 'Articles / Blogs', date: 'September 7, 2026', industry: 'Retail', tone: 'b', tags: ['guest wi-fi', 'engagements'] },
-  { title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', kind: 'On-demand webinar', date: 'September 7, 2026', industry: 'Hospitality', tone: 'c', tags: ['guest wi-fi'] },
-  { title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', kind: 'Articles / Blogs', date: 'July 24, 2026', industry: 'Healthcare', tone: 'd', tags: ['asset tracking'] },
-  { title: 'Care Re-Imagined: The Smart Hospital', kind: 'On-demand webinar', date: 'July 2, 2026', industry: 'Healthcare', tone: 'a', tags: ['asset tracking', 'people safety'] },
+  { title: 'Smart Spaces Starts Here', kind: 'Webinar', date: 'September 21, 2026', industry: 'General', tone: 'a', img: '/images/cards/webinar.svg', tags: ['smart workspaces'] },
+  { title: 'Beyond Guest Wi-Fi: What You Can Actually Do with the Locus Captive Portal', kind: 'Articles / Blogs', date: 'September 7, 2026', industry: 'Retail', tone: 'b', img: '/images/cards/guest.svg', tags: ['guest wi-fi', 'engagements'] },
+  { title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', kind: 'On-demand webinar', date: 'September 7, 2026', industry: 'Hospitality', tone: 'c', img: '/images/cards/laptop.svg', tags: ['guest wi-fi'] },
+  { title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', kind: 'Articles / Blogs', date: 'July 24, 2026', industry: 'Healthcare', tone: 'd', img: '/images/cards/asset.svg', tags: ['asset tracking'] },
+  { title: 'Care Re-Imagined: The Smart Hospital', kind: 'On-demand webinar', date: 'July 2, 2026', industry: 'Healthcare', tone: 'a', img: '/images/cards/hospital.svg', tags: ['asset tracking', 'people safety'] },
   { title: 'How a University Campus Reclaimed 30% of Its Teaching Space', kind: 'Case Study', date: 'June 18, 2026', industry: 'Education', tone: 'b', img: '/images/universities_hero.webp', tags: ['space utilization', 'occupancy monitoring'] },
-  { title: 'Wi-Fi 7 and Location: What Changes for Indoor Positioning', kind: 'Articles / Blogs', date: 'June 3, 2026', industry: 'General', tone: 'c', tags: ['indoor navigation'] },
+  { title: 'Wi-Fi 7 and Location: What Changes for Indoor Positioning', kind: 'Articles / Blogs', date: 'June 3, 2026', industry: 'General', tone: 'c', img: '/images/cards/blog.svg', tags: ['indoor navigation'] },
   { title: 'A Global Retailer Turns Footfall into Conversion', kind: 'Case Study', date: 'May 20, 2026', industry: 'Retail', tone: 'd', img: '/images/retail_hero.webp', tags: ['location analytics'] },
-  { title: 'Hybrid Work Playbook: Desk Booking that People Actually Use', kind: 'On-demand webinar', date: 'May 6, 2026', industry: 'Workspaces', tone: 'a', tags: ['smart desking', 'smart workspaces'] },
+  { title: 'Hybrid Work Playbook: Desk Booking that People Actually Use', kind: 'On-demand webinar', date: 'May 6, 2026', industry: 'Workspaces', tone: 'a', img: '/images/cards/laptop.svg', tags: ['smart desking', 'smart workspaces'] },
   { title: 'Finding Equipment 40% Faster in a Regional Hospital', kind: 'Case Study', date: 'April 22, 2026', industry: 'Healthcare', tone: 'b', img: '/images/healthcare_hero.webp', tags: ['asset tracking'] },
-  { title: 'Crowd Safety at Scale: Density Monitoring for Venues', kind: 'Articles / Blogs', date: 'April 8, 2026', industry: 'Venues', tone: 'c', tags: ['density monitoring'] },
-  { title: 'Energy Savings You Can Prove: Occupancy-Driven Building Control', kind: 'Webinar', date: 'March 25, 2026', industry: 'Workspaces', tone: 'd', tags: ['energy efficiency'] },
+  { title: 'Crowd Safety at Scale: Density Monitoring for Venues', kind: 'Articles / Blogs', date: 'April 8, 2026', industry: 'Venues', tone: 'c', img: '/images/cards/stadium.svg', tags: ['density monitoring'] },
+  { title: 'Energy Savings You Can Prove: Occupancy-Driven Building Control', kind: 'Webinar', date: 'March 25, 2026', industry: 'Workspaces', tone: 'd', img: '/images/cards/analytics.svg', tags: ['energy efficiency'] },
 ]
 
 const PAGE = 6
@@ -70,7 +70,7 @@ function Card({ it, i }: { it: Item; i: number }) {
   return (
     <motion.article layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: .96 }} transition={{ duration: 0.45, ease, delay: (i % 6) * 0.05 }} className="rp-card">
       <div className={`rp-card__media t-${it.tone}`}>
-        {it.img && <img src={it.img} alt="" loading="lazy" />}
+        {it.img && <img className="card-art" src={it.img} alt="" loading="lazy" />}
         <span className="rp-card__tag">{it.kind}</span>
       </div>
       <div className="rp-card__body">
@@ -129,7 +129,7 @@ export function Stories() {
               <motion.div key="q" className="rp-videos" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.35, ease }}>
                 {quick.filter((v) => v.t.toLowerCase().includes(q.toLowerCase())).map((v, i) => (
                   <motion.a key={v.t} href="#" onClick={(e) => e.preventDefault()} className="rp-video" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05, duration: 0.5, ease }}>
-                    <span className={`rp-video__thumb t-${'abcd'[i % 4]}`}><Play size={30} fill="currentColor" /></span>
+                    <span className={`rp-video__thumb t-${'abcd'[i % 4]}`}><img src={['/images/cards/hospital.svg','/images/cards/office.svg','/images/cards/guest.svg','/images/cards/laptop.svg','/images/cards/stadium.svg','/images/cards/mall.svg','/images/cards/asset.svg','/images/cards/analytics.svg'][i % 8]} alt="" loading="lazy" /><Play size={30} fill="currentColor" /></span>
                     <span className="rp-video__len">{v.d}</span>
                     <b>{v.t}</b>
                   </motion.a>
@@ -204,7 +204,7 @@ export function Webinars() {
             <Link href="/contact" className="rp-btn">Register now <ArrowRight size={18} /></Link>
           </motion.div>
           <motion.div className="rp-feature__art" initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease, delay: 0.15 }} aria-hidden="true">
-            <span><Play size={44} fill="currentColor" /></span>
+            <img src="/images/cards/webinar.svg" alt="" /><span><Play size={44} fill="currentColor" /></span>
           </motion.div>
         </div>
       </section>
@@ -232,7 +232,7 @@ export function Ebooks() {
         <div className="rp-wrap rp-books">
           {books.map((b, i) => (
             <motion.article key={b.t} className="rp-book" {...reveal} transition={{ ...reveal.transition, delay: (i % 3) * 0.08 }}>
-              <div className={`rp-book__cover t-${'abcd'[i % 4]}`}><span>{b.t}</span><small>Locus</small></div>
+              <div className={`rp-book__cover t-${'abcd'[i % 4]}`} style={{ backgroundImage: `linear-gradient(180deg, rgba(11,31,51,.15), rgba(11,31,51,.85)), url(${['/images/cards/ebook.svg','/images/cards/office.svg','/images/cards/hospital.svg','/images/cards/stadium.svg','/images/cards/analytics.svg','/images/cards/guest.svg'][i % 6]})` }}><span>{b.t}</span><small>Locus</small></div>
               <h3>{b.t}</h3>
               <p>{b.d}</p>
               <button className="rp-btn rp-btn--outline" onClick={() => setDone(b.t)}>

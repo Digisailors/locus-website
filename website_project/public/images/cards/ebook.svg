@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<defs>
+<linearGradient id="bgebook" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
+<radialGradient id="glebook" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
+<pattern id="grebook" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+</defs>
+<rect width="640" height="400" fill="url(#bgebook)"/><rect width="640" height="400" fill="url(#grebook)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#glebook)"/>
+<polygon points="307.0,127.5 506.2,242.5 333.0,342.5 133.8,227.5" fill="#6b7e92" />
+<polygon points="506.2,256.5 333.0,356.5 333.0,342.5 506.2,242.5" fill="#192c41" />
+<polygon points="133.8,241.5 333.0,356.5 333.0,342.5 133.8,227.5" fill="#25415f" />
+<polygon points="285.4,153.0 389.3,213.0 311.3,258.0 207.4,198.0" fill="#69d892" />
+<polygon points="389.3,235.0 311.3,280.0 311.3,258.0 389.3,213.0" fill="#178640" />
+<polygon points="207.4,220.0 311.3,280.0 311.3,258.0 207.4,198.0" fill="#22c55e" />
+<polygon points="287.1,140.0 387.5,198.0 313.1,241.0 212.6,183.0" fill="#fafcfd" />
+<polygon points="387.5,218.0 313.1,261.0 313.1,241.0 387.5,198.0" fill="#a9aaab" />
+<polygon points="212.6,203.0 313.1,261.0 313.1,241.0 212.6,183.0" fill="#f8fafc" />
+<polygon points="285.4,105.0 389.3,165.0 311.3,210.0 207.4,150.0" fill="#7aaaf9" />
+<polygon points="389.3,189.0 311.3,234.0 311.3,210.0 389.3,165.0" fill="#2858a7" />
+<polygon points="207.4,174.0 311.3,234.0 311.3,210.0 207.4,150.0" fill="#3b82f6" />
+<polygon points="287.1,94.0 387.5,152.0 313.1,195.0 212.6,137.0" fill="#f8bd59" />
+<polygon points="387.5,170.0 313.1,213.0 313.1,195.0 387.5,152.0" fill="#a76b07" />
+<polygon points="212.6,155.0 313.1,213.0 313.1,195.0 212.6,137.0" fill="#f59e0b" />
+<polygon points="285.4,111.0 363.3,156.0 356.4,160.0 278.4,115.0" fill="#fff" />
+<polygon points="268.0,121.0 320.0,151.0 313.1,155.0 261.1,125.0" fill="#fde68a" />
+<polygon points="354.6,267.0 406.6,297.0 346.0,332.0 294.0,302.0" fill="#fafcfd" />
+<polygon points="406.6,305.0 346.0,340.0 346.0,332.0 406.6,297.0" fill="#a9aaab" />
+<polygon points="294.0,310.0 346.0,340.0 346.0,332.0 294.0,302.0" fill="#f8fafc" />
+</svg>

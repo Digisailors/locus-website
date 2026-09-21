@@ -34,7 +34,6 @@ const heroImage: Record<string, string> = {
   'asset-tracking': '/images/warehouse_tracking.webp',
   'detect-locate': '/images/manufacturing_hero.webp',
   'indoor-navigation': '/images/museums_hero.webp',
-  'guest-wifi-onboarding': '/images/shopping_mall_hero.webp',
   'contextual-engagements': '/images/retail_hero.webp',
   'location-analytics': '/images/shopping_mall_hero.webp',
   'energy-efficiency': '/images/real_estate_hero.webp',
@@ -56,10 +55,10 @@ const industryTiles = [
 ]
 
 const resourcePicks = [
-  { tag: 'Webinar', title: 'Smart Spaces Starts Here', date: 'September 21, 2026', href: '/resources/webinars', tone: 'a' },
-  { tag: 'Articles / Blogs', title: 'Beyond Guest Wi-Fi: What You Can Actually Do with Locus', date: 'September 7, 2026', href: '/resources/blogs', tone: 'b' },
-  { tag: 'On-demand webinar', title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', date: 'September 7, 2026', href: '/resources/webinars', tone: 'c' },
-  { tag: 'Articles / Blogs', title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', date: 'July 24, 2026', href: '/resources/blogs', tone: 'd' },
+  { tag: 'Webinar', title: 'Smart Spaces Starts Here', date: 'September 21, 2026', href: '/resources/webinars', img: '/images/cards/webinar.svg', tone: 'a' },
+  { tag: 'Articles / Blogs', title: 'Beyond Guest Wi-Fi: What You Can Actually Do with Locus', date: 'September 7, 2026', href: '/resources/blogs', img: '/images/cards/guest.svg', tone: 'b' },
+  { tag: 'On-demand webinar', title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', date: 'September 7, 2026', href: '/resources/webinars', img: '/images/cards/laptop.svg', tone: 'c' },
+  { tag: 'Articles / Blogs', title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', date: 'July 24, 2026', href: '/resources/blogs', img: '/images/cards/asset.svg', tone: 'd' },
 ]
 
 function Faq({ q, a }: { q: string; a: string }) {
@@ -267,7 +266,7 @@ export default function SolutionDetail({ slug }: { slug: string }) {
               {resourcePicks.map((r, i) => (
                 <motion.div key={r.title} {...reveal} transition={{ ...reveal.transition, delay: i * 0.08 }}>
                   <Link href={r.href} className="cs-res">
-                    <div className={`cs-res__media t-${r.tone}`}><span>{r.tag}</span></div>
+                    <div className={`cs-res__media t-${r.tone}`}><img src={r.img} alt="" loading="lazy" /><span>{r.tag}</span></div>
                     <h3>{r.title}</h3>
                     <p>{r.date}</p>
                   </Link>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<defs>
+<linearGradient id="bgmap" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
+<radialGradient id="glmap" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
+<pattern id="grmap" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+</defs>
+<rect width="640" height="400" fill="url(#bgmap)"/><rect width="640" height="400" fill="url(#grmap)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#glmap)"/>
+<polygon points="302.7,152.0 475.9,252.0 337.3,332.0 164.1,232.0" fill="#78d2fa" />
+<polygon points="475.9,260.0 337.3,340.0 337.3,332.0 475.9,252.0" fill="#2681a9" />
+<polygon points="164.1,240.0 337.3,340.0 337.3,332.0 164.1,232.0" fill="#38bdf8" />
+<polygon points="302.7,106.0 475.9,206.0 337.3,286.0 164.1,186.0" fill="#84e9a9" />
+<polygon points="475.9,214.0 337.3,294.0 337.3,286.0 475.9,206.0" fill="#329757" />
+<polygon points="164.1,194.0 337.3,294.0 337.3,286.0 164.1,186.0" fill="#4ade80" />
+<polygon points="302.7,60.0 475.9,160.0 337.3,240.0 164.1,140.0" fill="#c2ccfd" />
+<polygon points="475.9,168.0 337.3,248.0 337.3,240.0 475.9,160.0" fill="#707aab" />
+<polygon points="164.1,148.0 337.3,248.0 337.3,240.0 164.1,140.0" fill="#a5b4fc" />
+<ellipse cx="302.6794919243112" cy="133" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M302.6794919243112 130 C 280.6794919243112 106, 286.6794919243112 84, 302.6794919243112 84 C 318.6794919243112 84, 324.6794919243112 106, 302.6794919243112 130 Z" fill="#ef4444"/><circle cx="302.6794919243112" cy="100" r="7" fill="#0b1f33"/>
+</svg>

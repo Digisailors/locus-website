@@ -3,6 +3,8 @@ import { ArrowRight } from 'lucide-react'
 import { byGroup } from '../data/solutions'
 import SolutionIcon from './SolutionIcon'
 
+const cardArt: Record<string, string> = { 'smart-workspaces': '/images/cards/office.svg', 'smart-healthcare': '/images/cards/hospital.svg', 'smart-venues': '/images/cards/stadium.svg' }
+
 const columns = [
   { heading: 'By Usecase', items: byGroup('usecase') },
   { heading: 'By Industry', items: byGroup('industry') },
@@ -27,7 +29,7 @@ export default function SolutionsMegaMenu({ onNavigate }: { onNavigate: () => vo
                 style={{ animationDelay: `${80 + i * 70}ms` }}
               >
                 <div className="mega-card__art">
-                  <SolutionIcon name={s.icon} className="mega-card__icon" />
+                  <img src={cardArt[s.slug]} alt="" className="mega-card__img" />
                 </div>
                 <h3 className="mega-card__title">{s.title}</h3>
                 <p className="mega-card__sub">{s.tagline}</p>

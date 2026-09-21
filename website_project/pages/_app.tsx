@@ -25,13 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/images/logo.png" />
       </Head>
       
-      {router.pathname === '/' && (
-        <div className="announce">
+      <div className="announce">
           <b>NEW!</b>
           <span><strong>Already running Locus?</strong> You may have spatial licences included and sitting idle. Let&apos;s find them now!</span>
           <a href="/contact">Find my licence <span aria-hidden="true">›</span></a>
-        </div>
-      )}
+      </div>
       <Navigation currentPath={router.pathname} />
       
       <main>

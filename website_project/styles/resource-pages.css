@@ -199,3 +199,18 @@
   .rp-quotes { grid-template-columns: 1fr; } .rp-quotes > button { display: none; }
   .rp-events li { grid-template-columns: 1fr; } .rp-builder, .rp-form { padding: 24px; }
 }
+
+/* ===== Card artwork ===== */
+.cs-res__media img, .rp-card__media img.card-art, .rp-video__thumb img, .rp-feature__art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms ease; }
+.cs-res__media img { z-index: 0; } .cs-res__media span { z-index: 2; }
+.cs-res:hover .cs-res__media img, .rp-video:hover .rp-video__thumb img { transform: scale(1.08); }
+.rp-card__media img { opacity: 1; }
+.rp-card__tag { z-index: 2; }
+.rp-video__thumb { position: relative; } .rp-video__thumb svg { position: relative; z-index: 2; }
+.rp-video__thumb img { z-index: 0; } .rp-video__thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(11,31,51,.55)); z-index: 1; }
+.rp-video__len { z-index: 3; }
+.rp-book__cover { background-size: cover; background-position: center; }
+.rp-book__cover span, .rp-book__cover small { position: relative; z-index: 2; }
+.rp-feature__art { overflow: hidden; } .rp-feature__art span { position: relative; z-index: 2; }
+.rp-roi__card img { display: block; width: 100%; height: 150px; margin-bottom: 18px; border-radius: 16px; object-fit: cover; transition: transform 500ms; }
+.rp-roi__card:hover img { transform: scale(1.04); }

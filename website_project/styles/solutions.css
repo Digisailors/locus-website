@@ -235,3 +235,8 @@
   .sol-split--flip .sol-split__text { order: 0; }
   .sol-apps { grid-template-columns: 1fr; }
 }
+
+/* Featured menu cards use illustrations */
+.mega-card__art { overflow: hidden; background: #0b1f33; padding: 0; display: block; }
+.mega-card__img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 600ms cubic-bezier(.22,1,.36,1); }
+.mega-card:hover .mega-card__img { transform: scale(1.18) translateY(-4px); }

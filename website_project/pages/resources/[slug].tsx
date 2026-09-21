@@ -17,7 +17,6 @@ function View({ slug }: { slug: string }) {
     case 'product-tour': return <Tour />
     case 'experience-center': return <div className="dp"><Experience /></div>
     case 'energy-saving-estimator': return <Estimator />
-    case 'setup-guide': return <Docs kind="setup" />
     case 'runbooks': return <Docs kind="runbooks" />
     case 'design-deployment-module': return <Module />
     case 'faqs': return <Faqs />

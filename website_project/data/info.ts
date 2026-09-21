@@ -153,12 +153,6 @@ export const resources: ResourceItem[] = [
   }),
 
   r('Learn', {
-    slug: 'setup-guide', title: 'Setup Guide', icon: 'Wrench', summary: 'Support on deploying, managing & using',
-    description: 'Step-by-step documentation for deploying Locus, managing sites and getting the most from every feature.',
-    highlights: [h('Get started', 'Connect your wireless controller and add your first site.'), h('Manage', 'Configure maps, users, alerts and integrations.'), h('Troubleshoot', 'Diagnose accuracy, coverage and connectivity issues.')],
-    bullets: ['Searchable documentation', 'Release notes', 'Contact support directly'],
-  }),
-  r('Learn', {
     slug: 'runbooks', title: 'Runbooks', icon: 'FileText', summary: 'Step-by-step guidance to deploy, adopt, and maximize the value of Locus',
     description: 'Practical runbooks for each use case, from first deployment to sustained adoption and value tracking.',
     highlights: [h('Deploy', 'Checklists and design patterns for reliable rollouts.'), h('Adopt', 'Change-management guidance to bring teams along.'), h('Maximise', 'KPIs and review cadences to keep improving outcomes.')],

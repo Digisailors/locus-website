@@ -8,9 +8,9 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 /* ============ ROI ============ */
 const roiIndustries = [
-  { k: 'Workspaces', tags: ['Space savings', 'Energy', 'Hybrid work'], stats: [['30%', 'Real estate savings'], ['25%', 'Lower energy use'], ['4x', 'Faster space planning']] },
-  { k: 'Healthcare', tags: ['Asset tracking', 'Patient flow', 'Safety'], stats: [['40%', 'Less equipment search time'], ['20%', 'Higher asset utilisation'], ['<3s', 'Alert response']] },
-  { k: 'Retail', tags: ['Footfall', 'Engagement', 'Conversion'], stats: [['15%', 'Conversion uplift'], ['2.5x', 'Wi-Fi opt-in'], ['18%', 'Longer dwell time']] },
+  { k: 'Workspaces', art: 'office', tags: ['Space savings', 'Energy', 'Hybrid work'], stats: [['30%', 'Real estate savings'], ['25%', 'Lower energy use'], ['4x', 'Faster space planning']] },
+  { k: 'Healthcare', art: 'hospital', tags: ['Asset tracking', 'Patient flow', 'Safety'], stats: [['40%', 'Less equipment search time'], ['20%', 'Higher asset utilisation'], ['<3s', 'Alert response']] },
+  { k: 'Retail', art: 'mall', tags: ['Footfall', 'Engagement', 'Conversion'], stats: [['15%', 'Conversion uplift'], ['2.5x', 'Wi-Fi opt-in'], ['18%', 'Longer dwell time']] },
 ]
 
 export function Roi({ study }: { study?: boolean }) {
@@ -40,6 +40,7 @@ export function Roi({ study }: { study?: boolean }) {
           <div className="rp-roi">
             {roiIndustries.map((r, i) => (
               <motion.button key={r.k} className={`rp-roi__card ${sel === i ? 'is-on' : ''}`} onClick={() => setSel(i)} {...reveal} transition={{ ...reveal.transition, delay: i * 0.08 }}>
+                <img src={`/images/cards/${r.art}.svg`} alt="" />
                 <h3>{r.k}</h3>
                 <span>{r.tags.map((t) => <i key={t}>{t}</i>)}</span>
               </motion.button>

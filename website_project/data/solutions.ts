@@ -60,7 +60,7 @@ export const solutions: Solution[] = [
       { title: 'Manage crowds safely', description: 'Live density views help operations teams keep queues short and exits clear.' },
     ],
     features: ['Guest Wi-Fi onboarding', 'Venue wayfinding', 'Live crowd density', 'Location-triggered campaigns'],
-    related: ['guest-wifi-onboarding', 'contextual-engagements', 'density-monitoring', 'stadium-venue'],
+    related: ['contextual-engagements', 'density-monitoring', 'stadium-venue'],
   }, 'featured'),
 
   // ---------- By Usecase ----------
@@ -102,7 +102,7 @@ export const solutions: Solution[] = [
       { title: 'Measure real impact', description: 'Connect each engagement to the visits and purchases that follow.' },
     ],
     features: ['Geofence and dwell triggers', 'Rich in-app and web messages', 'Audience segmentation', 'Campaign attribution reports'],
-    related: ['guest-wifi-onboarding', 'location-analytics', 'retail'],
+    related: ['location-analytics', 'retail'],
   }, 'usecase'),
   f({
     slug: 'location-analytics', title: 'Location Analytics', icon: 'BarChart3',
@@ -142,19 +142,6 @@ export const solutions: Solution[] = [
     ],
     features: ['Wi-Fi and BLE detection', 'Last-seen history', 'Rogue device alerts', 'Floor plan overlays'],
     related: ['asset-tracking', 'ap-auto-location', 'indoor-navigation'],
-  }, 'usecase'),
-  f({
-    slug: 'guest-wifi-onboarding', title: 'Guest Wi-Fi Onboarding', icon: 'Wifi',
-    tagline: 'Turn Wi-Fi into a welcome mat',
-    description: 'Branded captive portals with social, form and OTP login capture consented visitor profiles in seconds.',
-    metrics: [{ value: '2.5x', label: 'Higher opt-in' }, { value: '<10s', label: 'To get online' }, { value: '100%', label: 'Consent tracked' }],
-    benefits: [
-      { title: 'Fast, friction-free login', description: 'Guests connect in a few taps using the method they prefer.' },
-      { title: 'Build first-party data', description: 'Collect consented profiles that feed your CRM and campaigns.' },
-      { title: 'On-brand everywhere', description: 'Custom portals per site, language and audience.' },
-    ],
-    features: ['Social, OTP and form login', 'Multi-language portals', 'Consent and terms management', 'CRM integrations'],
-    related: ['contextual-engagements', 'smart-venues', 'hospitality'],
   }, 'usecase'),
   f({
     slug: 'energy-efficiency', title: 'Energy Efficiency', icon: 'Leaf',
@@ -276,7 +263,7 @@ export const solutions: Solution[] = [
       { title: 'Staff smarter', description: 'Match staffing to real footfall by hour and zone.' },
     ],
     features: ['Footfall and dwell analytics', 'Offer triggers', 'Store comparisons', 'Staffing insights'],
-    related: ['contextual-engagements', 'location-analytics', 'guest-wifi-onboarding'],
+    related: ['contextual-engagements', 'location-analytics'],
   }, 'industry'),
   f({
     slug: 'education', title: 'Education', icon: 'GraduationCap',
@@ -360,7 +347,7 @@ export const solutions: Solution[] = [
       { title: 'Smarter upsell', description: 'Suggest spa, dining and events at the right moment.' },
     ],
     features: ['Guest Wi-Fi onboarding', 'Staff location and dispatch', 'Property navigation', 'In-stay offers'],
-    related: ['guest-wifi-onboarding', 'smart-venues', 'contextual-engagements'],
+    related: ['smart-venues', 'contextual-engagements'],
   }, 'industry'),
 
   // ---------- By Teams ----------
