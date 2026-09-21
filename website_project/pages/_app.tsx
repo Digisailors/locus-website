@@ -8,6 +8,7 @@ import '../styles/cisco-home.css'
 import '../styles/discover.css'
 import '../styles/solution-page.css'
 import '../styles/resource-pages.css'
+import '../styles/why.css'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 

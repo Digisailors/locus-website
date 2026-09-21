@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 import { discover } from '../data/info'
+import WhyLocus from './WhyLocus'
 
 const ease = [0.22, 1, 0.36, 1] as const
 const reveal = {
@@ -335,7 +336,7 @@ function Packages() {
 export default function DiscoverPage({ slug }: { slug: string }) {
   return (
     <div className="dp">
-      {slug === 'why-locus' && <Why />}
+      {slug === 'why-locus' && <WhyLocus />}
       {slug === 'locus-platform' && <Platform />}
       {slug === 'smart-spaces-apps' && <Apps />}
       {slug === 'experience-locus' && <Experience />}
