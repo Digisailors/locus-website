@@ -50,7 +50,8 @@ export default function Navigation({ currentPath }: NavigationProps) {
   const unmountTimer = useRef<ReturnType<typeof setTimeout>>()
   const router = useRouter()
 
-  const openMega = (key: MenuKey) => { clearTimeout(closeTimer.current); setOpenMenu(key) }
+  const openedAt = useRef(0)
+  const openMega = (key: MenuKey) => { clearTimeout(closeTimer.current); if (openMenu !== key) openedAt.current = Date.now(); setOpenMenu(key) }
   const scheduleClose = () => { clearTimeout(closeTimer.current); closeTimer.current = setTimeout(() => setOpenMenu(null), 140) }
   const closeAll = () => { setOpenMenu(null); setMobileMenuOpen(false) }
 
@@ -113,7 +114,7 @@ export default function Navigation({ currentPath }: NavigationProps) {
                   aria-haspopup="true"
                   onMouseEnter={() => openMega(key)}
                   onFocus={() => openMega(key)}
-                  onClick={() => setOpenMenu(open ? null : key)}
+                  onClick={() => (open && Date.now() - openedAt.current > 400 ? setOpenMenu(null) : openMega(key))}
                 >
                   {link.label}
                   <ChevronDown className={`site-nav__chevron ${open ? 'is-open' : ''}`} size={15} aria-hidden="true" />
