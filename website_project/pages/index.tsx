@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import HomeCarousel from '../components/HomeCarousel'
 import HomeSections from '../components/HomeSections'
-import CTABanner from '../components/CTABanner'
 
 export default function HomePage() {
   return (
@@ -14,12 +13,6 @@ export default function HomePage() {
       <div className="bg-surface-neutral">
         <HomeCarousel />
         <HomeSections />
-        <CTABanner
-          title="Ready to Transform Your Space?"
-          description="Join thousands of enterprises that have turned their buildings into smart spaces."
-          buttonText="Request Demo"
-          buttonHref="/contact"
-        />
       </div>
     </>
   )

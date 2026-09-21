@@ -91,7 +91,7 @@
 }
 .hc__slide { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; height: 100%; padding: 40px clamp(28px, 6vw, 88px); }
 .hc__pill { display: inline-block; padding: 10px 26px; border-radius: 10px; background: rgba(115,226,143,.14); color: var(--color-accent-bright); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 26px; }
-.hc__copy h1 { color: #fff; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700; margin: 0 0 12px; }
+.hc__copy h2 { color: #fff; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700; margin: 0 0 12px; }
 .hc__sub { color: #fff; font-size: clamp(1.15rem, 2vw, 1.6rem); font-weight: 500; margin: 0 0 26px; }
 .hc__body { color: rgba(255,255,255,.75); font-size: 1.08rem; max-width: 32rem; margin: 0 0 36px; }
 .hc__cta {

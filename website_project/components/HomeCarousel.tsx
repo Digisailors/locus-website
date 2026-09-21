@@ -71,7 +71,7 @@ export default function HomeCarousel() {
           >
             <div className="hc__copy">
               <span className="hc__pill">{s.eyebrow}</span>
-              <h1>{s.title}</h1>
+              <h2>{s.title}</h2>
               <p className="hc__sub">{s.subtitle}</p>
               <p className="hc__body">{s.body}</p>
               <Link href={s.href} className="hc__cta">{s.cta}</Link>
