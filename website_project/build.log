@@ -1,0 +1,26 @@
+
+> spatial-intelligence-website@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Linting and checking validity of types ...
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Collecting page data ...
+   Generating static pages (0/3) ...
+ ✓ Generating static pages (3/3)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                             Size     First Load JS
+┌ ○ /                                     260 kB          341 kB
+├   /_app                                 0 B            80.3 kB
+└ ○ /404                                  181 B          80.5 kB
++ First Load JS shared by all             85.3 kB
+  ├ chunks/framework-2b1f7a23d657eae4.js  44.9 kB
+  ├ chunks/main-4b423ec82b590a3f.js       33.9 kB
+  └ other shared chunks (total)           6.55 kB
+
+○  (Static)  prerendered as static content
+

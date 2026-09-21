@@ -1,0 +1,59 @@
+
+> spatial-intelligence-website@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:9000
+
+ ✓ Starting...
+ ✓ Ready in 1091ms
+ ○ Compiling / ...
+ ✓ Compiled / in 838ms (1212 modules)
+ ✓ Compiled in 76ms (1212 modules)
+Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+ GET / 200 in 1271ms
+ ✓ Compiled /platform in 304ms (1234 modules)
+ GET /platform 200 in 324ms
+ GET / 200 in 25ms
+ ✓ Compiled /contact in 175ms (1246 modules)
+ GET /_next/data/development/contact.json 200 in 9ms
+ GET /_next/data/development/index.json 200 in 39ms
+ ✓ Compiled /industries in 196ms (1271 modules)
+ GET /industries 200 in 223ms
+ GET / 200 in 39ms
+ GET / 200 in 21ms
+ ✓ Compiled /platform in 76ms (1246 modules)
+ GET /platform 200 in 89ms
+ ✓ Compiled /solutions in 109ms (1260 modules)
+ GET /solutions 200 in 117ms
+ ✓ Compiled /industries in 38ms (1294 modules)
+ GET /industries 200 in 45ms
+ ✓ Compiled /technology in 64ms (1312 modules)
+ GET /technology 200 in 71ms
+ ✓ Compiled /use-cases in 233ms (1328 modules)
+ GET /use-cases 200 in 251ms
+ GET /contact 200 in 4ms
+ GET /solutions 200 in 9ms
+ GET /industries 200 in 6ms
+ GET /technology 200 in 5ms
+ GET /use-cases 200 in 3ms
+ GET /contact 200 in 2ms
+ GET /industries 200 in 9ms
+ GET /industries 200 in 11ms
+ GET / 200 in 25ms
+ GET /platform 200 in 7ms
+ GET /solutions 200 in 3ms
+ GET /industries 200 in 4ms
+ GET /technology 200 in 2ms
+ GET /use-cases 200 in 3ms
+ GET /contact 200 in 2ms
+ GET / 200 in 34ms
+ GET / 200 in 50ms
+ GET /technology 200 in 33ms
+ GET /industries 200 in 16ms
+ GET /use-cases 200 in 19ms
+ GET / 200 in 28ms
+ ✓ Compiled in 612ms (1257 modules)
+ ✓ Compiled in 128ms (1127 modules)
+ ✓ Compiled in 45ms (1127 modules)
