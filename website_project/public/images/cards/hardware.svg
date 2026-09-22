@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<defs>
+<linearGradient id="bghw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
+<radialGradient id="glhw" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grhw" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
+</defs>
+<rect width="640" height="400" fill="url(#bghw)"/><rect width="640" height="400" fill="url(#grhw)"/><ellipse cx="320" cy="240" rx="260" ry="130" fill="url(#glhw)"/>
+<!-- Industrial Gateway Box -->
+<polygon points="320,110 470,195 320,280 170,195" fill="#1b395a" stroke="#0099ff" stroke-width="2"/>
+<polygon points="170,195 320,280 320,330 170,245" fill="#0c233c"/>
+<polygon points="320,280 470,195 470,245 320,330" fill="#152f4c"/>
+<!-- Top antenna array -->
+<circle cx="320" cy="195" r="28" fill="#0099ff" opacity=".8"/>
+<circle cx="320" cy="195" r="14" fill="#fff"/>
+<circle cx="260" cy="160" r="8" fill="#38bdf8"/>
+<circle cx="380" cy="160" r="8" fill="#38bdf8"/>
+<circle cx="260" cy="230" r="8" fill="#38bdf8"/>
+<circle cx="380" cy="230" r="8" fill="#38bdf8"/>
+<!-- RF Propagation waves -->
+<ellipse cx="320" cy="195" rx="70" ry="40" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/>
+<ellipse cx="320" cy="195" rx="120" ry="68" fill="none" stroke="#0099ff" stroke-width="2" opacity=".6"/>
+<ellipse cx="320" cy="195" rx="170" ry="96" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="8 8" opacity=".4"/>
+<!-- Status LED -->
+<circle cx="430" cy="205" r="5" fill="#22c55e"/>
+<circle cx="445" cy="214" r="5" fill="#38bdf8"/>
+</svg>

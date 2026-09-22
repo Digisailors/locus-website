@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<defs>
+<linearGradient id="bgloc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
+<radialGradient id="glloc" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grloc" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
+</defs>
+<rect width="640" height="400" fill="url(#bgloc)"/><rect width="640" height="400" fill="url(#grloc)"/><ellipse cx="320" cy="240" rx="260" ry="130" fill="url(#glloc)"/>
+<!-- Map plane / Plant Grid -->
+<polygon points="320,110 520,225 320,340 120,225" fill="#152f4c" stroke="#38bdf8" stroke-width="1.5"/>
+<!-- Staging bays & pathways -->
+<polygon points="260,180 380,250 350,268 230,198" fill="#1b3f66" stroke="#0099ff" stroke-width="1"/>
+<polygon points="360,170 440,215 410,233 330,188" fill="#1b3f66" stroke="#0099ff" stroke-width="1"/>
+<!-- Target Vehicle Coordinate Pin -->
+<circle cx="320" cy="225" r="32" fill="rgba(0,153,255,.2)" stroke="#38bdf8" stroke-width="2"/>
+<circle cx="320" cy="225" r="12" fill="#00e5ff"/>
+<!-- Location Pin Indicator -->
+<path d="M320 150 C 300 150 285 165 285 185 C 285 210 320 235 320 235 C 320 235 355 210 355 185 C 355 165 340 150 320 150 Z" fill="#0099ff"/>
+<circle cx="320" cy="182" r="10" fill="#fff"/>
+</svg>

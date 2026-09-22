@@ -82,21 +82,81 @@
 
 /* ===== Home carousel ===== */
 .hc { position: relative; max-width: 1360px; margin: 0 auto; padding: 32px clamp(20px, 5vw, 72px) 20px; }
-.hc__card { position: relative; overflow: hidden; border-radius: 32px; background: var(--color-primary-navy); height: 600px; box-shadow: var(--shadow-3); }
+.hc__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: var(--color-primary-navy);
+  min-height: 620px;
+  height: auto;
+  box-shadow: var(--shadow-3);
+  display: flex;
+  flex-direction: column;
+}
 .hc__bg {
   position: absolute; inset: 0; opacity: .6;
   background-image: linear-gradient(rgba(0,163,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(0,163,255,.12) 1px, transparent 1px);
   background-size: 52px 52px; animation: gridDrift 26s linear infinite;
   mask-image: radial-gradient(ellipse at 70% 45%, #000, transparent 80%);
 }
-.hc__slide { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; height: 100%; padding: 40px clamp(28px, 6vw, 88px); }
-.hc__pill { display: inline-block; padding: 10px 26px; border-radius: 10px; background: rgba(0,163,255,.16); color: var(--color-accent-bright); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 26px; }
-.hc__copy h2 { color: #fff; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700; margin: 0 0 12px; }
-.hc__sub { color: #fff; font-size: clamp(1.15rem, 2vw, 1.6rem); font-weight: 500; margin: 0 0 26px; }
-.hc__body { color: rgba(255,255,255,.75); font-size: 1.08rem; max-width: 32rem; margin: 0 0 36px; }
+.hc__slide {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 32px;
+  align-items: center;
+  min-height: 620px;
+  height: 100%;
+  flex: 1;
+  padding: 44px clamp(28px, 5vw, 80px);
+  box-sizing: border-box;
+}
+.hc__pill {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: rgba(0,163,255,.16);
+  color: var(--color-accent-bright);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.hc__copy h2 {
+  color: #fff;
+  font-size: clamp(2.1rem, 3.8vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.hc__sub {
+  color: #fff;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+.hc__body {
+  color: rgba(255,255,255,.8);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 32rem;
+  margin: 0 0 26px;
+}
 .hc__cta {
-  display: inline-block; padding: 16px 30px; border-radius: 99px; background: linear-gradient(135deg, #00a3ff, #0066ff); color: #fff;
-  font-weight: 700; box-shadow: 0 10px 28px rgba(0,153,255,.32); transition: transform 200ms ease, box-shadow 200ms ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #00a3ff, #0066ff);
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  box-shadow: 0 10px 28px rgba(0,153,255,.32);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  margin-bottom: 6px;
 }
 .hc__cta:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(0,153,255,.45); }
 .hc__art { position: relative; height: 380px; }
@@ -189,15 +249,17 @@
   .dmenu__panel { padding-left: 0; }
 }
 @media (max-width: 960px) {
-  .hc__card { height: 720px; }
-  .hc__slide { grid-template-columns: 1fr; padding: 40px 28px 28px; align-content: start; }
-  .hc__art { height: 220px; }
+  .hc__card { min-height: auto; height: auto; }
+  .hc__slide { grid-template-columns: 1fr; padding: 36px 28px 32px; min-height: auto; align-content: start; }
+  .hc__art { height: 180px; }
   .hs-stats, .hs-pillars, .hs-res { grid-template-columns: repeat(2, 1fr); }
   .hs-apps, .hs-stories { grid-template-columns: 1fr; }
   .hs { padding: 72px 0; }
 }
 @media (max-width: 560px) {
   .hs-stats, .hs-pillars, .hs-res { grid-template-columns: 1fr; }
-  .hc__card { height: auto; min-height: 0; } .hc__slide { min-height: 0; }
+  .hc__card { height: auto; min-height: 0; }
+  .hc__slide { min-height: 0; padding: 28px 20px 24px; }
+  .hc__art { display: none; }
   .hc__arrow { display: none; }
 }
