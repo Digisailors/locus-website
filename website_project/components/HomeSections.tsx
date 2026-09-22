@@ -116,25 +116,25 @@ function Connect() {
         <motion.div className="cs-iso" {...reveal} transition={{ ...reveal.transition, delay: 0.12 }} aria-hidden="true">
           <svg viewBox="0 0 520 600">
             <defs>
-              <linearGradient id="isoL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#38bdf8" /><stop offset="1" stopColor="#0e7490" /></linearGradient>
-              <linearGradient id="isoR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#4ade80" /><stop offset="1" stopColor="#166534" /></linearGradient>
-              <radialGradient id="cloud" cx=".5" cy=".4" r=".7"><stop offset="0" stopColor="#fff" /><stop offset="1" stopColor="#d7f5df" /></radialGradient>
+              <linearGradient id="isoL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#0099ff" /><stop offset="1" stopColor="#0b1f38" /></linearGradient>
+              <linearGradient id="isoR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#38bdf8" /><stop offset="1" stopColor="#0284c7" /></linearGradient>
+              <radialGradient id="cloud" cx=".5" cy=".4" r=".7"><stop offset="0" stopColor="#fff" /><stop offset="1" stopColor="#cbe7ff" /></radialGradient>
             </defs>
             <polygon points="30,380 260,490 260,580 30,470" fill="url(#isoL)" />
             <polygon points="260,490 490,380 490,470 260,580" fill="url(#isoR)" />
-            <polygon points="260,270 490,380 260,490 30,380" fill="#fff" stroke="#bfe9cc" strokeWidth="2" />
+            <polygon points="260,270 490,380 260,490 30,380" fill="#fff" stroke="#bae6fd" strokeWidth="2" />
             {[[150, 380], [260, 330], [370, 380], [260, 440], [200, 350], [330, 420]].map(([x, y], i) => (
               <g key={i}>
                 <line x1={x} y1={y} x2="260" y2="380" className="cs-iso__link" />
-                <circle cx={x} cy={y} r="9" fill="#22c55e" className="cs-iso__node" style={{ animationDelay: `${i * 0.35}s` }} />
+                <circle cx={x} cy={y} r="9" fill="#0099ff" className="cs-iso__node" style={{ animationDelay: `${i * 0.35}s` }} />
               </g>
             ))}
             <line x1="260" y1="380" x2="260" y2="170" className="cs-iso__beam" />
             <line x1="235" y1="380" x2="235" y2="190" className="cs-iso__beam b2" />
             <line x1="285" y1="380" x2="285" y2="190" className="cs-iso__beam b3" />
             <ellipse cx="260" cy="160" rx="120" ry="52" fill="url(#cloud)" className="cs-iso__cloud" />
-            <ellipse cx="260" cy="120" rx="70" ry="30" fill="#86efac" opacity=".85" className="cs-iso__cloud" />
-            <ellipse cx="260" cy="60" rx="46" ry="20" fill="#22c55e" opacity=".9" className="cs-iso__cloud" />
+            <ellipse cx="260" cy="120" rx="70" ry="30" fill="#7dd3fc" opacity=".85" className="cs-iso__cloud" />
+            <ellipse cx="260" cy="60" rx="46" ry="20" fill="#0099ff" opacity=".9" className="cs-iso__cloud" />
           </svg>
         </motion.div>
       </div>

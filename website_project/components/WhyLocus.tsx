@@ -99,8 +99,8 @@ export default function WhyLocus() {
         <div className="wl-waves" aria-hidden="true">
           <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="w1" x1="0" x2="1"><stop offset="0" stopColor="#0e7490" /><stop offset=".5" stopColor="#0ea5a4" /><stop offset="1" stopColor="#22c55e" /></linearGradient>
-              <linearGradient id="w2" x1="0" x2="1"><stop offset="0" stopColor="#0b3b6f" /><stop offset=".6" stopColor="#0e7490" /><stop offset="1" stopColor="#15803d" /></linearGradient>
+              <linearGradient id="w1" x1="0" x2="1"><stop offset="0" stopColor="#0052cc" /><stop offset=".5" stopColor="#0099ff" /><stop offset="1" stopColor="#38bdf8" /></linearGradient>
+              <linearGradient id="w2" x1="0" x2="1"><stop offset="0" stopColor="#0b1f38" /><stop offset=".6" stopColor="#0284c7" /><stop offset="1" stopColor="#0099ff" /></linearGradient>
             </defs>
             <path className="wl-wave wl-wave--a" fill="url(#w2)" d="M0 220 C 240 120 420 300 720 200 S 1200 120 1440 220 V400 H0Z" />
             <path className="wl-wave wl-wave--b" fill="url(#w1)" d="M0 280 C 260 200 480 340 760 270 S 1220 210 1440 290 V400 H0Z" />

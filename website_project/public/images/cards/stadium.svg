@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
 <defs>
 <linearGradient id="bgstadium" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
-<radialGradient id="glstadium" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
-<pattern id="grstadium" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+<radialGradient id="glstadium" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grstadium" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
 </defs>
 <rect width="640" height="400" fill="url(#bgstadium)"/><rect width="640" height="400" fill="url(#grstadium)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#glstadium)"/>
 <polygon points="320.0,80.0 536.5,205.0 320.0,330.0 103.5,205.0" fill="#6b7e92" />

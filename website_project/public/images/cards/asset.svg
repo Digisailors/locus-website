@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
 <defs>
 <linearGradient id="bgasset" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
-<radialGradient id="glasset" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
-<pattern id="grasset" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+<radialGradient id="glasset" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grasset" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
 </defs>
 <rect width="640" height="400" fill="url(#bgasset)"/><rect width="640" height="400" fill="url(#grasset)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#glasset)"/>
 <polygon points="302.7,125.0 510.5,245.0 337.3,345.0 129.5,225.0" fill="#6b7e92" />
@@ -32,9 +32,9 @@
 <polygon points="337.3,265.0 363.3,280.0 337.3,295.0 311.3,280.0" fill="#f89fcd" />
 <polygon points="363.3,306.0 337.3,321.0 337.3,295.0 363.3,280.0" fill="#a64e7c" />
 <polygon points="311.3,306.0 337.3,321.0 337.3,295.0 311.3,280.0" fill="#f472b6" />
-<ellipse cx="307.0096189432334" cy="135.5" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M307.0096189432334 132.5 C 285.0096189432334 108.5, 291.0096189432334 86.5, 307.0096189432334 86.5 C 323.0096189432334 86.5, 329.0096189432334 108.5, 307.0096189432334 132.5 Z" fill="#4ade80"/><circle cx="307.0096189432334" cy="102.5" r="7" fill="#0b1f33"/>
+<ellipse cx="307.0096189432334" cy="135.5" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M307.0096189432334 132.5 C 285.0096189432334 108.5, 291.0096189432334 86.5, 307.0096189432334 86.5 C 323.0096189432334 86.5, 329.0096189432334 108.5, 307.0096189432334 132.5 Z" fill="#0099ff"/><circle cx="307.0096189432334" cy="102.5" r="7" fill="#0b1f33"/>
 <ellipse cx="406.6025403784439" cy="179" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M406.6025403784439 176 C 384.6025403784439 152, 390.6025403784439 130, 406.6025403784439 130 C 422.6025403784439 130, 428.6025403784439 152, 406.6025403784439 176 Z" fill="#22d3ee"/><circle cx="406.6025403784439" cy="146" r="7" fill="#0b1f33"/>
-<ellipse cx="220.40707856478954" cy="201.5" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M220.40707856478954 198.5 C 198.40707856478954 174.5, 204.40707856478954 152.5, 220.40707856478954 152.5 C 236.40707856478954 152.5, 242.40707856478954 174.5, 220.40707856478954 198.5 Z" fill="#4ade80"/><circle cx="220.40707856478954" cy="168.5" r="7" fill="#0b1f33"/>
+<ellipse cx="220.40707856478954" cy="201.5" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M220.40707856478954 198.5 C 198.40707856478954 174.5, 204.40707856478954 152.5, 220.40707856478954 152.5 C 236.40707856478954 152.5, 242.40707856478954 174.5, 220.40707856478954 198.5 Z" fill="#0099ff"/><circle cx="220.40707856478954" cy="168.5" r="7" fill="#0b1f33"/>
 <ellipse cx="337.3205080756888" cy="271" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M337.3205080756888 268 C 315.3205080756888 244, 321.3205080756888 222, 337.3205080756888 222 C 353.3205080756888 222, 359.3205080756888 244, 337.3205080756888 268 Z" fill="#fbbf24"/><circle cx="337.3205080756888" cy="238" r="7" fill="#0b1f33"/>
-<path d="M307.0096189432334 172.5 Q 356.8060796608387 122.5 406.6025403784439 222" stroke="#4ade80" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+<path d="M307.0096189432334 172.5 Q 356.8060796608387 122.5 406.6025403784439 222" stroke="#38bdf8" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
 </svg>

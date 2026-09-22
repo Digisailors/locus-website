@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
 <defs>
 <linearGradient id="bglaptop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
-<radialGradient id="gllaptop" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
-<pattern id="grlaptop" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+<radialGradient id="gllaptop" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grlaptop" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
 </defs>
 <rect width="640" height="400" fill="url(#bglaptop)"/><rect width="640" height="400" fill="url(#grlaptop)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#gllaptop)"/>
 <polygon points="307.0,124.5 506.2,239.5 333.0,339.5 133.8,224.5" fill="#6b7e92" />
@@ -14,11 +14,11 @@
 <polygon points="294.0,44.0 441.2,129.0 434.3,133.0 287.1,48.0" fill="#5c616e" />
 <polygon points="441.2,239.0 434.3,243.0 434.3,133.0 441.2,129.0" fill="#0a101d" />
 <polygon points="287.1,158.0 434.3,243.0 434.3,133.0 287.1,48.0" fill="#0f172a" />
-<polygon points="293.0,154.8 428.4,233.0 428.4,136.2 293.0,58.0" fill="#0f766e" />
-<polygon points="295.9,86.1 425.5,160.9 425.5,138.9 295.9,64.1" fill="#134e4a" />
+<polygon points="293.0,154.8 428.4,233.0 428.4,136.2 293.0,58.0" fill="#0077e6" />
+<polygon points="295.9,86.1 425.5,160.9 425.5,138.9 295.9,64.1" fill="#0052cc" />
 <polygon points="361.6,209.0 361.4,209.1 361.2,209.1 361.0,209.2 360.8,209.2 360.6,209.2 360.4,209.2 360.2,209.1 360.0,209.1 359.8,209.0 359.7,208.9 359.6,208.8 359.5,208.7 359.5,208.6 359.5,208.4 359.5,208.3 359.6,208.2 359.7,208.1 359.8,208.0 360.0,207.9 360.2,207.9 360.4,207.8 360.6,207.8 360.8,207.8 361.0,207.8 361.2,207.9 361.4,207.9 361.6,208.0 361.7,208.1 361.8,208.2 361.9,208.3 361.9,208.4 361.9,208.6 361.9,208.7 361.8,208.8 361.7,208.9 361.6,209.0" fill="none" />
 <polygon points="352.0,158.5 352.0,118.5 383.2,156.5" fill="#fff" />
-<polygon points="301.8,84.0 390.1,135.0 390.1,129.5 301.8,78.5" fill="#4ade80" />
+<polygon points="301.8,84.0 390.1,135.0 390.1,129.5 301.8,78.5" fill="#38bdf8" />
 <polygon points="250.7,192.0 372.0,262.0 332.1,285.0 210.9,215.0" fill="#b6c0cf" />
 <polygon points="372.0,264.0 332.1,287.0 332.1,285.0 372.0,262.0" fill="#656f7d" />
 <polygon points="210.9,217.0 332.1,287.0 332.1,285.0 210.9,215.0" fill="#94a3b8" />

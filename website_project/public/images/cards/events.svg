@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
 <defs>
 <linearGradient id="bgevents" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
-<radialGradient id="glevents" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
-<pattern id="grevents" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+<radialGradient id="glevents" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="grevents" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
 </defs>
 <rect width="640" height="400" fill="url(#bgevents)"/><rect width="640" height="400" fill="url(#grevents)"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#glevents)"/>
 <polygon points="311.3,122.0 510.5,237.0 328.7,342.0 129.5,227.0" fill="#6b7e92" />
@@ -11,9 +11,9 @@
 <polygon points="311.3,135.0 449.9,215.0 337.3,280.0 198.8,200.0" fill="#fafcfd" />
 <polygon points="449.9,237.0 337.3,302.0 337.3,280.0 449.9,215.0" fill="#a9aaab" />
 <polygon points="198.8,222.0 337.3,302.0 337.3,280.0 198.8,200.0" fill="#f8fafc" />
-<polygon points="311.3,127.0 449.9,207.0 337.3,272.0 198.8,192.0" fill="#69d892" />
-<polygon points="449.9,215.0 337.3,280.0 337.3,272.0 449.9,207.0" fill="#178640" />
-<polygon points="198.8,200.0 337.3,280.0 337.3,272.0 198.8,192.0" fill="#22c55e" />
+<polygon points="311.3,127.0 449.9,207.0 337.3,272.0 198.8,192.0" fill="#52baff" />
+<polygon points="449.9,215.0 337.3,280.0 337.3,272.0 449.9,207.0" fill="#0068ad" />
+<polygon points="198.8,200.0 337.3,280.0 337.3,272.0 198.8,192.0" fill="#0099ff" />
 <polygon points="304.4,142.0 318.3,150.0 306.1,157.0 292.3,149.0" fill="#cbd5e1" />
 <polygon points="325.2,154.0 339.1,162.0 326.9,169.0 313.1,161.0" fill="#cbd5e1" />
 <polygon points="346.0,166.0 359.8,174.0 347.7,181.0 333.9,173.0" fill="#cbd5e1" />

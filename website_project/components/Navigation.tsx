@@ -84,15 +84,12 @@ export default function Navigation({ currentPath }: NavigationProps) {
     >
       <div className="site-nav__inner">
         {/* Logo */}
-        <Link href="/" className="site-nav__brand flex items-center gap-3" aria-label="Locus Spatial Intelligence home">
+        <Link href="/" className="site-nav__brand flex items-center" aria-label="Locus Spatial Systems home">
           <img
             src="/images/logo.png"
-            alt="Logo"
-            className="h-10 w-auto"
+            alt="Locus Spatial Systems"
+            className="h-9 md:h-10 w-auto object-contain"
           />
-          <span className="font-display text-xl font-bold text-primary-navy">
-            Spatial Intelligence
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

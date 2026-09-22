@@ -8,23 +8,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Locus Edge Design System from PDF - FIXED
-        'primary-navy': '#0B1F33',
-        'accent-cyan': '#22C55E',        // Vibrant lime-green for accents
-        'canvas-bone': '#F3F6F2',
-        'active-green': '#22C55E',         // Active pill green
+        // Locus Spatial Systems Brand Palette
+        'primary-navy': '#0B1F38',
+        'accent-cyan': '#0099FF',         // Signature cyan from the logo "O" ring
+        'accent-bright': '#38BDF8',       // Bright cyan glow highlight
+        'canvas-bone': '#F4F6F9',         // Crisp tech surface neutral
+        'active-green': '#0099FF',        // Active accent
         'charcoal-grey': '#526170',
-        'surface-cool': '#E7F7EB',
-        'attention-amber': '#FEF3C7',      // Attention amber
-        'pure-white': '#FFFFFF',            // Pure white for cards
-        success: '#22C55E',
+        'surface-cool': '#EBF5FF',        // Sky/cyan wash
+        'attention-amber': '#FEF3C7',     // Attention amber
+        'pure-white': '#FFFFFF',          // Pure white for cards
+        success: '#10B981',
         warning: '#F59E0B',
         error: '#EF4444',
-        info: '#3B82F6',
+        info: '#0099FF',
         'surface-base': '#FFFFFF',
-        'surface-neutral': '#F3F6F2',
-        'border-default': '#DCE4DF',
-        'dark-canvas': '#0B1F33',
+        'surface-neutral': '#F4F6F9',
+        'border-default': '#E2E8F0',
+        'dark-canvas': '#0B1F38',
       },
       fontFamily: {
         display: ['Inter', 'Segoe UI', 'Arial', 'sans-serif'],

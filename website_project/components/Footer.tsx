@@ -47,13 +47,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="/images/logo.png" 
-                alt="Logo" 
+                src="/images/logo-white.png" 
+                alt="Locus Spatial Systems" 
                 className="h-10 w-auto"
               />
-              <span className="font-display text-xl font-bold text-white">
-                Your Brand
-              </span>
             </div>
             <p className="text-white/60 text-body mb-6 max-w-sm">
               Transform your buildings into smart spaces with AI-powered spatial intelligence. 
@@ -131,7 +128,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-body-sm">
-            © {new Date().getFullYear()} Your Brand. All rights reserved.
+            © {new Date().getFullYear()} Locus Spatial Systems. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="/privacy" className="text-white/40 hover:text-white text-body-sm transition-colors">

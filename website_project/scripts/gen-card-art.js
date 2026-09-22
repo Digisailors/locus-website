@@ -60,7 +60,7 @@ class Scene {
     const [px, py] = this.P(x, y, 0)
     this.s.push(`<ellipse cx="${px}" cy="${py + 2}" rx="13" ry="6" fill="#000" opacity=".25"/><rect x="${px - 2}" y="${py - 14}" width="4" height="14" fill="#7c4a1e"/><circle cx="${px}" cy="${py - 26}" r="15" fill="#22c55e"/><circle cx="${px - 4}" cy="${py - 30}" r="7" fill="#86efac" opacity=".7"/>`)
   }
-  pin(x, y, z, col = '#4ade80') {
+  pin(x, y, z, col = '#0099ff') {
     const [px, py] = this.P(x, y, z)
     this.s.push(`<ellipse cx="${px}" cy="${py + 3}" rx="10" ry="4" fill="#000" opacity=".3"/><path d="M${px} ${py} C ${px - 22} ${py - 24}, ${px - 16} ${py - 46}, ${px} ${py - 46} C ${px + 16} ${py - 46}, ${px + 22} ${py - 24}, ${px} ${py} Z" fill="${col}"/><circle cx="${px}" cy="${py - 30}" r="7" fill="#0b1f33"/>`)
   }
@@ -71,8 +71,8 @@ class Scene {
 const svg = (body, id) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
 <defs>
 <linearGradient id="bg${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f33"/><stop offset="1" stop-color="#12314f"/></linearGradient>
-<radialGradient id="gl${id}" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
-<pattern id="gr${id}" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#73e28f" stroke-opacity=".09"/></pattern>
+<radialGradient id="gl${id}" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#0099ff" stop-opacity=".45"/><stop offset="1" stop-color="#0099ff" stop-opacity="0"/></radialGradient>
+<pattern id="gr${id}" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity=".12"/></pattern>
 </defs>
 <rect width="640" height="400" fill="url(#bg${id})"/><rect width="640" height="400" fill="url(#gr${id})"/><ellipse cx="320" cy="290" rx="300" ry="120" fill="url(#gl${id})"/>
 ${body}
@@ -86,8 +86,8 @@ scenes.office = () => {
   s.box(-40, -70, 0, 80, 80, 150, '#a5b4fc')
   s.windows(-40, -70, 0, 80, 80, 150, 7, 4, '#1e3a8a')
   s.box(-40, -70, 150, 80, 80, 8, '#6366f1')
-  s.box(-10, 10, 0, 110, 70, 62, '#86efac')
-  s.windows(-10, 10, 0, 110, 70, 62, 3, 5, '#14532d')
+  s.box(-10, 10, 0, 110, 70, 62, '#38bdf8')
+  s.windows(-10, 10, 0, 110, 70, 62, 3, 5, '#0c4a6e')
   s.box(-105, -30, 0, 55, 60, 40, '#fbcfe8')
   s.windows(-105, -30, 0, 55, 60, 40, 2, 3, '#831843')
   s.tree(-90, 70); s.tree(70, -60); s.tree(85, 80)
@@ -155,11 +155,11 @@ scenes.laptop = () => {
   s.plate(230, 200)
   s.box(-85, -55, 0, 170, 120, 8, '#cbd5e1')
   s.box(-85, -55, 8, 170, 8, 110, '#0f172a')
-  s.left(-85, -55, 8, 170, 8, 110, 0.04, 0.96, 0.06, 0.94, '#0f766e')
-  s.left(-85, -55, 8, 170, 8, 110, 0.06, 0.94, 0.7, 0.9, '#134e4a')
+  s.left(-85, -55, 8, 170, 8, 110, 0.04, 0.96, 0.06, 0.94, '#0077e6')
+  s.left(-85, -55, 8, 170, 8, 110, 0.06, 0.94, 0.7, 0.9, '#0052cc')
   s.disc(0, -47, 0, 1, 'none')
   s.poly([[-10, -47, 45], [-10, -47, 85], [26, -47, 65]], '#fff')
-  s.left(-85, -55, 8, 170, 8, 110, 0.1, 0.7, 0.75, 0.8, '#4ade80')
+  s.left(-85, -55, 8, 170, 8, 110, 0.1, 0.7, 0.75, 0.8, '#38bdf8')
   s.box(-70, 10, 8, 140, 46, 2, '#94a3b8')
   return s
 }
@@ -170,9 +170,9 @@ scenes.blog = () => {
   s.box(-90, -60, 0, 110, 150, 10, '#f8fafc')
   s.box(-84, -66, 10, 110, 150, 10, '#e2e8f0')
   s.box(-78, -72, 20, 110, 150, 10, '#f8fafc')
-  for (let i = 0; i < 6; i++) s.poly([[-60, -60 + i * 20, 31], [40 - (i % 3) * 20, -60 + i * 20, 31], [40 - (i % 3) * 20, -54 + i * 20, 31], [-60, -54 + i * 20, 31]], i === 0 ? '#22c55e' : '#94a3b8')
-  ;[[60, 50, '#4ade80'], [60, 84, '#22c55e'], [60, 118, '#16a34a']].forEach(([x, h, c], i) => s.box(x, -10 + i * 0, 0, 22, 22, h, c))
-  s.box(60, 18, 0, 22, 22, 60, '#86efac'); s.box(60, 46, 0, 22, 22, 110, '#22c55e')
+  for (let i = 0; i < 6; i++) s.poly([[-60, -60 + i * 20, 31], [40 - (i % 3) * 20, -60 + i * 20, 31], [40 - (i % 3) * 20, -54 + i * 20, 31], [-60, -54 + i * 20, 31]], i === 0 ? '#0099ff' : '#94a3b8')
+  ;[[60, 50, '#38bdf8'], [60, 84, '#0099ff'], [60, 118, '#0052cc']].forEach(([x, h, c], i) => s.box(x, -10 + i * 0, 0, 22, 22, h, c))
+  s.box(60, 18, 0, 22, 22, 60, '#7dd3fc'); s.box(60, 46, 0, 22, 22, 110, '#0099ff')
   return s
 }
 
@@ -184,14 +184,14 @@ scenes.asset = () => {
   s.box(-90, -70, 4, 40, 30, 24, '#f59e0b'); s.box(20, -80, 4, 34, 34, 30, '#38bdf8'); s.box(-80, 40, 4, 44, 34, 20, '#a78bfa'); s.box(70, 50, 4, 30, 30, 26, '#f472b6')
   s.pin(-70, -55, 40); s.pin(37, -63, 46, '#22d3ee'); s.pin(-58, 57, 36); s.pin(85, 65, 42, '#fbbf24')
   const [a, b] = s.P(-70, -55, 0), [c, d] = s.P(37, -63, 0)
-  s.raw(`<path d="M${a} ${b} Q ${(a + c) / 2} ${b - 50} ${c} ${d}" stroke="#4ade80" stroke-width="3" fill="none" stroke-dasharray="6 6"/>`)
+  s.raw(`<path d="M${a} ${b} Q ${(a + c) / 2} ${b - 50} ${c} ${d}" stroke="#38bdf8" stroke-width="3" fill="none" stroke-dasharray="6 6"/>`)
   return s
 }
 
 scenes.ebook = () => {
   const s = new Scene(320, 235)
   s.plate(230, 200)
-  s.box(-80, -40, 0, 120, 90, 22, '#22c55e'); s.box(-72, -34, 22, 116, 86, 20, '#f8fafc'); s.box(-84, -44, 42, 120, 90, 24, '#3b82f6')
+  s.box(-80, -40, 0, 120, 90, 22, '#0099ff'); s.box(-72, -34, 22, 116, 86, 20, '#f8fafc'); s.box(-84, -44, 42, 120, 90, 24, '#0052cc')
   s.box(-76, -38, 66, 116, 86, 18, '#f59e0b')
   s.poly([[-60, -20, 84], [30, -20, 84], [30, -12, 84], [-60, -12, 84]], '#fff')
   s.poly([[-60, 0, 84], [0, 0, 84], [0, 8, 84], [-60, 8, 84]], '#fde68a')
@@ -204,11 +204,11 @@ scenes.guest = () => {
   s.plate(230, 200)
   s.box(-32, -20, 20, 64, 14, 130, '#0f172a')
   s.left(-32, -20, 20, 64, 14, 130, 0.08, 0.92, 0.05, 0.95, '#12314f')
-  s.left(-32, -20, 20, 64, 14, 130, 0.14, 0.86, 0.6, 0.78, '#4ade80')
+  s.left(-32, -20, 20, 64, 14, 130, 0.14, 0.86, 0.6, 0.78, '#38bdf8')
   s.left(-32, -20, 20, 64, 14, 130, 0.14, 0.86, 0.3, 0.5, '#e2e8f0')
   const [px, py] = s.P(0, -6, 170)
-  for (let i = 1; i <= 3; i++) s.raw(`<path d="M${px - i * 22} ${py - i * 10} Q ${px} ${py - i * 30 - 10} ${px + i * 22} ${py - i * 10}" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" opacity="${1 - i * 0.2}"/>`)
-  s.raw(`<circle cx="${px}" cy="${py + 6}" r="6" fill="#4ade80"/>`)
+  for (let i = 1; i <= 3; i++) s.raw(`<path d="M${px - i * 22} ${py - i * 10} Q ${px} ${py - i * 30 - 10} ${px + i * 22} ${py - i * 10}" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" opacity="${1 - i * 0.2}"/>`)
+  s.raw(`<circle cx="${px}" cy="${py + 6}" r="6" fill="#0099ff"/>`)
   s.pin(-90, 50, 0, '#fbbf24'); s.pin(80, 30, 0, '#22d3ee')
   return s
 }
@@ -217,7 +217,7 @@ scenes.analytics = () => {
   const s = new Scene(320, 240)
   s.plate(240, 200)
   const hs = [40, 70, 55, 105, 85, 135]
-  hs.forEach((h, i) => s.box(-100 + i * 34, -20, 0, 24, 30, h, i % 2 ? '#22c55e' : '#4ade80'))
+  hs.forEach((h, i) => s.box(-100 + i * 34, -20, 0, 24, 30, h, i % 2 ? '#0099ff' : '#38bdf8'))
   const pts = hs.map((h, i) => s.P(-88 + i * 34, -5, h + 30))
   s.raw(`<polyline points="${pts.map((p) => p.map((n) => n.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>`)
   pts.forEach(([x, y]) => s.raw(`<circle cx="${x}" cy="${y}" r="6" fill="#0b1f33" stroke="#fff" stroke-width="3"/>`))
@@ -228,7 +228,7 @@ scenes.events = () => {
   const s = new Scene(320, 232)
   s.plate(230, 210)
   s.box(-80, -70, 0, 160, 130, 22, '#f8fafc')
-  s.box(-80, -70, 22, 160, 130, 8, '#22c55e')
+  s.box(-80, -70, 22, 160, 130, 8, '#0099ff')
   for (let r = 0; r < 4; r++) for (let c = 0; c < 6; c++) s.poly([[-68 + c * 24, -50 + r * 26, 31], [-52 + c * 24, -50 + r * 26, 31], [-52 + c * 24, -36 + r * 26, 31], [-68 + c * 24, -36 + r * 26, 31]], r === 1 && c === 3 ? '#f59e0b' : '#cbd5e1')
   s.pin(-20, -15, 32, '#ef4444')
   return s
@@ -236,7 +236,7 @@ scenes.events = () => {
 
 scenes.map = () => {
   const s = new Scene(320, 250)
-  for (let i = 0; i < 3; i++) { s.box(-100, -80, i * 46, 200, 160, 8, ['#38bdf8', '#4ade80', '#a5b4fc'][i]) }
+  for (let i = 0; i < 3; i++) { s.box(-100, -80, i * 46, 200, 160, 8, ['#38bdf8', '#0099ff', '#a5b4fc'][i]) }
   s.pin(-30, -10, 100, '#ef4444')
   return s
 }

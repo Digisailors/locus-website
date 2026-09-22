@@ -18,8 +18,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Locus Edge | Industrial IoT & Vision Systems</title>
-        <meta name="description" content="Industrial IoT, LiDAR mesh, RTSP vision pipelines, and defect classification systems for manufacturing automation" />
+        <title>Locus Spatial Systems | Enterprise Spatial Intelligence</title>
+        <meta name="description" content="Turn indoor spaces into smart, actionable environments with Locus Spatial Systems — spatial mapping, asset tracking, and analytics." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
