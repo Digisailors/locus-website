@@ -39,12 +39,11 @@ function TryButton({ label = 'Try for free' }: { label?: string }) {
 
 /* ============ Why Locus ============ */
 function Why() {
-  const p = page('why-locus')
   const reasons = [
-    { n: '01', t: 'No new hardware', d: p.highlights[0].description },
-    { n: '02', t: 'One map, many outcomes', d: p.highlights[1].description },
-    { n: '03', t: 'Open by design', d: p.highlights[2].description },
-    { n: '04', t: 'Built for the enterprise', d: `${p.bullets[0]}. ${p.bullets[1]}.` },
+    { n: '01', t: 'Sub-Meter BLE & BLE AoA Gateways', d: 'Industrial locator arrays track vehicle chassis, WIP parts carts, and tooling with 30–50 cm precision across active assembly lines.' },
+    { n: '02', t: 'Centimeter UWB Assembly Marriage', d: 'Ultra-wideband time-difference-of-arrival precision (10–30 cm) guarantees error-proof chassis, battery, and powertrain alignment.' },
+    { n: '03', t: 'LoRaWAN Outdoor Yard Tracking', d: 'Long-range battery-powered GPS transponders monitor finished vehicles across 100+ acre staging yards with zero cellular SIM fees.' },
+    { n: '04', t: 'mmWave Lighting & Safety Automation', d: '60GHz micro-motion radar sensors automate high-bay industrial lighting and protect worker safety in robotic cells without cameras.' },
   ]
   return (
     <>
@@ -64,8 +63,8 @@ function Why() {
         </div>
       </section>
       <section className="dp-cta">
-        <motion.h2 {...reveal}>Ready to see it in your buildings?</motion.h2>
-        <motion.div {...reveal}><TryButton /></motion.div>
+        <motion.h2 {...reveal}>Ready to eliminate blind spots in your assembly plant?</motion.h2>
+        <motion.div {...reveal}><TryButton label="Schedule Plant Assessment" /></motion.div>
       </section>
     </>
   )
@@ -79,17 +78,17 @@ function Platform() {
       <section className="dp-hero dp-hero--platform">
         <div className="dp-orb" aria-hidden="true"><i /><i /><i /></div>
         <div className="dp-hero__inner">
-          <h1 className="dp-h1"><Words text="The Ultimate Platform To Turn Your Buildings Into Smart Spaces" gradientFrom={1} gradientTo={2} /></h1>
+          <h1 className="dp-h1"><Words text="The Ultimate Asset Tracking Platform for Manufacturing" gradientFrom={2} gradientTo={4} /></h1>
           <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.7 }}>
-            Locus connects People, Things and Spaces. It harnesses the power of your existing Wi-Fi, BLE and sensors,
-            making your buildings safe, smart and sustainable, creating seamless experiences for the people in them.
+            Locus tracks every vehicle chassis, WIP carrier, torque tool, and worker across the manufacturing plant.
+            Powered by industrial BLE gateways, BLE AoA arrays, centimeter UWB, outdoor LoRaWAN GPS, and mmWave radar automation.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.7 }}><TryButton /></motion.div>
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.7 }}><TryButton label="Request Plant Demo" /></motion.div>
         </div>
       </section>
       <section className="dp-block">
         <div className="dp-wrap">
-          <motion.h2 className="dp-h2" {...reveal}>One platform. <span className="dp-grad">Three layers.</span></motion.h2>
+          <motion.h2 className="dp-h2" {...reveal}>One industrial platform. <span className="dp-grad">Three core layers.</span></motion.h2>
           <div className="dp-layers">
             {p.highlights.map((h, i) => (
               <motion.article key={h.title} className="dp-layer" {...reveal} transition={{ ...reveal.transition, delay: i * 0.1 }}>
@@ -106,47 +105,42 @@ function Platform() {
           </ul>
         </div>
       </section>
-      <section className="dp-cta"><motion.h2 {...reveal}>Start building on Locus</motion.h2><motion.div {...reveal}><TryButton /></motion.div></section>
+      <section className="dp-cta"><motion.h2 {...reveal}>Deploy Asset Tracking in Your Plant</motion.h2><motion.div {...reveal}><TryButton label="Talk to Manufacturing Sales" /></motion.div></section>
     </>
   )
 }
 
-/* ============ Smart Spaces Apps ============ */
+/* ============ Manufacturing Asset Tracking Apps ============ */
 type AppItem = { code: string; name: string; text: string }
 const appGroups: Record<'spaces' | 'partner', { lead: string; rest: string; apps: AppItem[] }[]> = {
   spaces: [
-    { lead: 'Experience.', rest: ' Make everyday interactions memorable.', apps: [
-      { code: 'GR', name: 'Guest Roaming', text: 'Seamless, secure Wi-Fi as guests move between sites' },
-      { code: 'CP', name: 'Captive Portal', text: 'Branded onboarding with social, OTP and form login' },
-      { code: 'EN', name: 'Engagements', text: 'Location-triggered messages and offers' },
-      { code: 'SB', name: 'Space Booking', text: 'Find and book rooms and desks in a few taps' } ] },
-    { lead: 'Efficiency.', rest: ' Run every space smarter.', apps: [
-      { code: 'OM', name: 'Occupancy Monitoring', text: 'Live headcount by floor, zone and room' },
-      { code: 'AT', name: 'Asset Tracking', text: 'Find any tagged asset in seconds' },
-      { code: 'DL', name: 'Detect & Locate', text: 'Search and locate devices and tags on the map' },
-      { code: 'SD', name: 'Smart Desking', text: 'Hybrid desk booking with automatic check-in' } ] },
-    { lead: 'Analytics.', rest: ' Let data drive decisions.', apps: [
-      { code: 'BM', name: 'Behavior Metrics', text: 'Footfall, dwell and repeat-visit insight' },
-      { code: 'IA', name: 'Impact Analysis', text: 'Measure the effect of events and campaigns' },
-      { code: 'LA', name: 'Location Analytics', text: 'Custom reports across every site' },
-      { code: 'DM', name: 'Density Monitoring', text: 'Crowd heatmaps and threshold alerts' } ] },
+    { lead: 'Production Line WIP.', rest: ' Track vehicle products through every station.', apps: [
+      { code: 'PL', name: 'Production Line WIP', text: 'Sub-meter BLE AoA tracking of chassis through stamping, BIW, and trim' },
+      { code: 'CM', name: 'Chassis Marriage', text: 'Centimeter UWB positioning for powertrain, chassis, and battery mating' },
+      { code: 'TL', name: 'Tool & Rig Tracking', text: 'Locate calibrated torque tools and auto-enable torque presets by station' },
+      { code: 'AG', name: 'AGV & Tugger Flow', text: 'Coordinate automated guided vehicles and parts kitting carts in real time' } ] },
+    { lead: 'Yard & Outdoor Tracking.', rest: ' Manage finished vehicles and dispatching.', apps: [
+      { code: 'YM', name: 'Finished Vehicle Yard', text: 'Multi-kilometer LoRaWAN GPS tracking across vehicle holding lots' },
+      { code: 'VN', name: 'VIN-to-Bay Sync', text: 'Scan VIN and associate live GPS coordinate directly to parking bays' },
+      { code: 'DS', name: 'Hauler Dispatch', text: 'Automate staging and loading queues for outbound multi-car haulers' },
+      { code: 'CT', name: 'Container & Dolly Tracking', text: 'Monitor returnable transport items (RTIs) between tier suppliers and plant' } ] },
+    { lead: 'Plant Automation & Safety.', rest: ' Energy savings and hazard protection.', apps: [
+      { code: 'LA', name: 'mmWave High-Bay Lighting', text: 'Autonomous lighting dimming based on 60GHz micro-motion detection' },
+      { code: 'OC', name: 'Robotic Cell Safety', text: 'Non-optical occupancy monitoring ensuring worker safety around robotic cells' },
+      { code: 'TT', name: 'Takt Time Analytics', text: 'Live station cycle times, bottleneck alerts, and line-starvation warnings' },
+      { code: 'HA', name: 'Forklift Collision Avoidance', text: 'Proximity alerts between heavy tuggers, forklifts, and floor personnel' } ] },
   ],
   partner: [
-    { lead: 'Workplace.', rest: ' Plug into the tools people already use.', apps: [
-      { code: 'CA', name: 'Calendar Sync', text: 'Room availability from your calendar platform' },
-      { code: 'BM', name: 'Building Management', text: 'Occupancy-driven HVAC and lighting' },
-      { code: 'AC', name: 'Access Control', text: 'Badge and door events on the same map' },
-      { code: 'CH', name: 'Chat & Collaboration', text: 'Find colleagues and book from chat' } ] },
-    { lead: 'Healthcare.', rest: ' Purpose-built clinical integrations.', apps: [
-      { code: 'NC', name: 'Nurse Call', text: 'Route the nearest nurse to a call' },
-      { code: 'EH', name: 'EHR Context', text: 'Location context inside clinical records' },
-      { code: 'CE', name: 'Clinical Engineering', text: 'Maintenance status for tracked equipment' },
-      { code: 'IP', name: 'Infant Protection', text: 'Tag-based protection and alerts' } ] },
-    { lead: 'Retail & Venues.', rest: ' Grow spend and loyalty.', apps: [
-      { code: 'CR', name: 'CRM Connector', text: 'Consented visitor profiles into your CRM' },
-      { code: 'LY', name: 'Loyalty', text: 'Recognise and reward returning visitors' },
-      { code: 'PS', name: 'POS Insights', text: 'Join footfall with sales data' },
-      { code: 'QM', name: 'Queue Management', text: 'Live queue length and wait times' } ] },
+    { lead: 'MES & Industrial ERP.', rest: ' Bi-directional sync with plant systems.', apps: [
+      { code: 'SP', name: 'SAP S/4HANA Plant', text: 'Automatic WIP goods receipt and milestone confirmation via MQTT' },
+      { code: 'SM', name: 'Siemens Opcenter', text: 'Sync live chassis coordinates with BOM and assembly routing rules' },
+      { code: 'RW', name: 'Rockwell FactoryTalk', text: 'Trigger andon alerts and safety interlocks directly from RTLS events' },
+      { code: 'DM', name: 'Dassault DELMIA', text: 'Feed live physical asset coordinates into the plant 3D digital twin' } ] },
+    { lead: 'Hardware & Sensor Ecosystem.', rest: ' Industrial grade wireless infrastructure.', apps: [
+      { code: 'BA', name: 'BLE AoA Arrays', text: '30-50 cm precision locator arrays with multi-antenna angle of arrival' },
+      { code: 'UW', name: 'UWB Precision Anchors', text: '10-30 cm high-precision time-difference-of-arrival positioning nodes' },
+      { code: 'LR', name: 'LoRaWAN Outdoor Gateways', text: 'Rugged IP67 long-range base stations covering multi-kilometer yards' },
+      { code: 'MM', name: '60GHz mmWave Radar', text: 'Industrial presence sensing impervious to factory dust, sparks, and glare' } ] },
   ],
 }
 
@@ -156,16 +150,16 @@ function Apps() {
   return (
     <>
       <section className="dp-hero dp-hero--apps">
-        <h1 className="dp-h1 dp-h1--white"><Words text="Smart Spaces Apps" /></h1>
-        <motion.h2 className="dp-sub" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }}>{p.summary}</motion.h2>
+        <h1 className="dp-h1 dp-h1--white"><Words text="Manufacturing Asset Tracking Modules" /></h1>
+        <motion.h2 className="dp-sub" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }}>Automotive RTLS, Yard Management &amp; mmWave Automation</motion.h2>
         <motion.p className="dp-small" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.7 }}>
-          Choose built-in apps for core capabilities, or extend with partner apps for specialized solutions.
+          Deploy native industrial tracking modules or connect with leading automotive MES, ERP, and sensor hardware ecosystems.
         </motion.p>
         <motion.div className="dp-toggle" role="tablist" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.7 }}>
           {(['spaces', 'partner'] as const).map((k) => (
             <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={tab === k ? 'is-on' : ''}>
               {tab === k && <motion.span layoutId="toggle-pill" className="dp-toggle__pill" transition={{ type: 'spring', stiffness: 420, damping: 34 }} />}
-              <span>{k === 'spaces' ? 'Locus Apps' : 'Partner Apps'}</span>
+              <span>{k === 'spaces' ? 'Locus Modules' : 'Industrial Partners'}</span>
             </button>
           ))}
         </motion.div>
@@ -192,60 +186,67 @@ function Apps() {
           </AnimatePresence>
         </div>
       </section>
-      <section className="dp-cta"><motion.h2 {...reveal}>Find the apps that fit your spaces</motion.h2><motion.div {...reveal}><TryButton label="Talk to an expert" /></motion.div></section>
+      <section className="dp-cta"><motion.h2 {...reveal}>Build Your Plant Tracking Solution</motion.h2><motion.div {...reveal}><TryButton label="Talk to an RTLS Engineer" /></motion.div></section>
     </>
   )
 }
 
 /* ============ Experience ============ */
-function Building({ kind }: { kind: 'office' | 'hospital' | 'mall' }) {
-  const cols = kind === 'mall' ? 3 : 4
+function FactoryGraphic({ kind }: { kind: 'assembly' | 'yard' | 'powertrain' }) {
   return (
     <svg viewBox="0 0 320 300" className="dp-bld" aria-hidden="true">
       <ellipse cx="160" cy="262" rx="132" ry="28" fill="#0b1a2a" opacity=".55" />
       <polygon points="30,250 160,282 290,250 160,218" fill="#243447" />
-      <rect x="70" y={kind === 'office' ? 60 : 90} width="180" height={kind === 'office' ? 170 : 140} rx="8" fill={kind === 'mall' ? '#f59e0b' : '#eaf7ff'} />
-      <rect x="70" y={kind === 'office' ? 60 : 90} width="180" height="16" rx="8" fill={kind === 'office' ? '#6d5efc' : kind === 'hospital' ? '#0ea5a4' : '#c2410c'} />
-      {Array.from({ length: 3 }).flatMap((_, r) => Array.from({ length: cols }).map((__, c) => (
-        <rect key={`${r}${c}`} x={86 + c * (148 / cols)} y={(kind === 'office' ? 84 : 112) + r * 40} width={148 / cols - 12} height="26" rx="4" fill={kind === 'mall' ? '#1e3a8a' : '#4f8fe0'} opacity=".85" className="dp-win" style={{ animationDelay: `${(r + c) * 0.25}s` }} />
-      )))}
-      {kind === 'hospital' && <g><rect x="132" y="40" width="56" height="56" rx="8" fill="#fff" /><rect x="153" y="48" width="14" height="40" fill="#dc2626" /><rect x="140" y="61" width="40" height="14" fill="#dc2626" /></g>}
-      {kind === 'mall' && <rect x="112" y="184" width="96" height="30" rx="4" fill="#b91c1c" />}
-      <rect x="138" y="204" width="44" height="26" rx="3" fill="#22384d" />
-      <circle cx="58" cy="238" r="16" fill="#4ade80" /><circle cx="266" cy="240" r="14" fill="#22c55e" />
+      {/* Industrial plant building */}
+      <rect x="60" y="90" width="200" height="140" rx="8" fill="#122b49" />
+      <rect x="60" y="90" width="200" height="14" rx="6" fill="#0099ff" />
+      {/* Sawtooth rooflines for factory */}
+      <polygon points="60,90 85,60 110,90 135,60 160,90 185,60 210,90 235,60 260,90" fill="#0b1f38" stroke="#0099ff" strokeWidth="2" />
+      {/* High-bay windows / LED bays */}
+      <rect x="80" y="120" width="36" height="24" rx="4" fill="#00e5ff" opacity=".8" />
+      <rect x="142" y="120" width="36" height="24" rx="4" fill="#00e5ff" opacity=".8" />
+      <rect x="204" y="120" width="36" height="24" rx="4" fill="#00e5ff" opacity=".8" />
+      {/* Roll-up bay doors */}
+      <rect x="110" y="170" width="100" height="60" rx="4" fill="#081424" stroke="#0099ff" strokeWidth="1.5" />
+      <line x1="110" y1="185" x2="210" y2="185" stroke="#0099ff" strokeOpacity=".4" />
+      <line x1="110" y1="200" x2="210" y2="200" stroke="#0099ff" strokeOpacity=".4" />
+      <line x1="110" y1="215" x2="210" y2="215" stroke="#0099ff" strokeOpacity=".4" />
+      {/* Pulsing RTLS Beacon */}
+      <circle cx="160" cy="50" r="8" fill="#00e5ff" />
+      <circle cx="160" cy="50" r="18" fill="none" stroke="#00e5ff" strokeWidth="2" opacity=".6" />
     </svg>
   )
 }
 
 export function Experience() {
   const tiles = [
-    { kind: 'office' as const, title: 'Workplace', href: '/solutions/workspaces', cls: 'a' },
-    { kind: 'hospital' as const, title: 'Healthcare', href: '/solutions/healthcare', cls: 'b' },
-    { kind: 'mall' as const, title: 'Retail', href: '/solutions/retail', cls: 'c' },
+    { kind: 'assembly' as const, title: 'Passenger EV Assembly', href: '/solutions/passenger-ev', cls: 'a' },
+    { kind: 'yard' as const, title: 'Finished Vehicle Yard', href: '/solutions/yard-management', cls: 'b' },
+    { kind: 'powertrain' as const, title: 'Powertrain & Battery', href: '/solutions/tier1-suppliers', cls: 'c' },
   ]
   return (
     <>
       <div className="dp-wrap dp-wrap--wide">
         <motion.div className="dp-banner" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }}>
-          <div><small>NEW</small><strong>Locus Studio</strong></div>
-          <p>Design smart spaces and get tailored recommendations on hardware, software, and placement!</p>
-          <Link href="/resources/locus-studio" className="dp-banner__btn">Explore now <ArrowRight size={18} /></Link>
+          <div><small>NEW</small><strong>Locus Plant Twin</strong></div>
+          <p>Design multi-technology industrial RTLS and simulate BLE AoA, UWB, LoRaWAN, and mmWave coverage before commissioning!</p>
+          <Link href="/contact" className="dp-banner__btn">Explore Plant Twin <ArrowRight size={18} /></Link>
         </motion.div>
       </div>
       <section className="dp-hero dp-hero--exp">
-        <motion.p className="dp-caps" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>LOCUS EXPERIENCE CENTER</motion.p>
-        <h1 className="dp-giant dp-giant--md"><Words text="Experience" gradientFrom={0} delay={0.1} /><Words text="Smart Space" gradientFrom={0} delay={0.35} /></h1>
+        <motion.p className="dp-caps" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>LOCUS MANUFACTURING CENTER</motion.p>
+        <h1 className="dp-giant dp-giant--md"><Words text="Industrial" gradientFrom={0} delay={0.1} /><Words text="Asset Tracking" gradientFrom={0} delay={0.35} /></h1>
         <motion.p className="dp-lead" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.7 }}>
-          Experience real-world, day-in-the-life scenarios across industries and see how organizations drive <b>better experiences, improve efficiency, and make smarter decisions with analytics</b>
+          Experience end-to-end asset tracking across automobile manufacturing plants &mdash; from stamped metal to chassis marriage, automated high-bay lighting, and multi-acre finished vehicle yards.
         </motion.p>
-        <motion.h2 className="dp-sub dp-sub--bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>See what&apos;s possible for your industry</motion.h2>
+        <motion.h2 className="dp-sub dp-sub--bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>Explore solutions for your production environment</motion.h2>
       </section>
       <section className="dp-tiles">
         <div className="dp-wrap dp-wrap--wide dp-tiles__grid">
           {tiles.map((t, i) => (
             <motion.div key={t.title} {...reveal} transition={{ ...reveal.transition, delay: i * 0.12 }}>
               <Link href={t.href} className={`dp-tile dp-tile--${t.cls}`}>
-                <Building kind={t.kind} />
+                <FactoryGraphic kind={t.kind} />
                 <span>{t.title} <ArrowRight size={18} /></span>
               </Link>
             </motion.div>
@@ -258,14 +259,20 @@ export function Experience() {
 
 /* ============ Packages ============ */
 const packages = [
-  { name: 'Locus Essentials', tag: 'Start with the fundamentals', text: 'The fastest way to turn your buildings into smart spaces.', inc: ['Digital maps and floor plans', 'Occupancy monitoring', 'Location analytics dashboards', 'Standard support'] },
-  { name: 'Locus Advanced', tag: 'Scale across every site', text: 'The most powerful operating system to turn your buildings into smart spaces.', inc: ['Everything in Essentials', 'Indoor navigation and wayfinding', 'Asset tracking and Detect & Locate', 'Engagements and captive portal', 'Open APIs and integrations'] },
-  { name: 'Locus Enterprise', tag: 'Global scale, premium support', text: 'Advanced security, private deployment and dedicated success support.', inc: ['Everything in Advanced', 'Private cloud deployment options', 'Single sign-on and audit trails', 'Dedicated success manager', 'Custom SLAs'] },
+  { name: 'Locus Plant Essentials', tag: 'Real-time assembly visibility', text: 'The fastest path to sub-meter production line asset tracking.', inc: ['BLE AoA locator arrays & sub-meter tracking', 'Live 2D & 3D plant digital twin map', 'WIP station dwell & cycle time analytics', 'Industrial MQTT & REST telemetry APIs'] },
+  { name: 'Locus Automotive Advanced', tag: 'Complete plant & yard intelligence', text: 'Full hybrid RTLS uniting assembly line, high-bay lighting and holding yards.', inc: ['Everything in Essentials', 'Centimeter UWB chassis marriage tracking', 'Outdoor LoRaWAN GPS yard vehicle tracking', 'mmWave high-bay lighting automation & occupancy', 'Bi-directional SAP S/4HANA & Siemens MES sync'] },
+  { name: 'Locus Enterprise Multi-Plant', tag: 'Mission-critical OEM scale', text: 'Global multi-facility architecture with high-availability edge clustering.', inc: ['Everything in Advanced', 'On-prem air-gapped high-availability edge', 'Safety PLC & robotic workcell interlocks', 'Dedicated automotive RTLS solution architect', '24/7 mission-critical manufacturing SLA'] },
 ]
 const compare: [string, boolean, boolean, boolean][] = [
-  ['Digital maps', true, true, true], ['Occupancy monitoring', true, true, true], ['Location analytics', true, true, true],
-  ['Indoor navigation', false, true, true], ['Asset tracking', false, true, true], ['Engagements & captive portal', false, true, true],
-  ['Open APIs', false, true, true], ['Private deployment', false, false, true], ['Dedicated success manager', false, false, true],
+  ['BLE AoA Sub-Meter Tracking', true, true, true],
+  ['3D Plant Digital Twin', true, true, true],
+  ['Takt Time & Bottleneck Analytics', true, true, true],
+  ['UWB Centimeter Precision Tracking', false, true, true],
+  ['LoRaWAN Outdoor GPS Yard Tracking', false, true, true],
+  ['mmWave Lighting & Occupancy Automation', false, true, true],
+  ['Automotive MES & SAP ERP Sync', false, true, true],
+  ['On-Prem High Availability Edge', false, false, true],
+  ['Dedicated Plant Systems Engineer', false, false, true],
 ]
 
 function Packages() {
@@ -279,10 +286,10 @@ function Packages() {
           <motion.p className="dp-caps dp-caps--left" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>LOCUS</motion.p>
           <h1 className="dp-giant dp-giant--left"><Words text="PACKAGES" gradientFrom={0} /></h1>
           <motion.p className="dp-lead dp-lead--left" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.7 }}>
-            Every workplace is unique, which is why Locus offers a suite of packages designed to meet the specific needs of your business and unlock the full potential of your infrastructure
+            Tailored industrial RTLS tiers designed for automobile production lines, component gigafactories, and finished vehicle logistics yards.
           </motion.p>
           <div className="dp-tabs" role="tablist">
-            {([['overview', 'Package Overview'], ['compare', 'Compare All']] as const).map(([k, l]) => (
+            {([['overview', 'Package Overview'], ['compare', 'Compare Capabilities']] as const).map(([k, l]) => (
               <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={tab === k ? 'is-on' : ''}>
                 {l}
                 {tab === k && <motion.i layoutId="tab-line" transition={{ type: 'spring', stiffness: 420, damping: 34 }} />}
@@ -304,7 +311,7 @@ function Packages() {
                       <small>{p.tag}</small>
                       <b>Key Inclusions:</b>
                       <ul>{p.inc.map((x) => <li key={x}><Check size={16} /> {x}</li>)}</ul>
-                      <Link href="/contact" className="dp-try dp-try--sm">Talk to sales</Link>
+                      <Link href="/contact" className="dp-try dp-try--sm">Request Proposal</Link>
                     </div>
                   </article>
                 ))}
@@ -328,7 +335,7 @@ function Packages() {
           )}
         </AnimatePresence>
       </section>
-      <section className="dp-cta"><motion.h2 {...reveal}>Not sure which package fits?</motion.h2><motion.div {...reveal}><TryButton label="Talk to sales" /></motion.div></section>
+      <section className="dp-cta"><motion.h2 {...reveal}>Need a custom manufacturing deployment?</motion.h2><motion.div {...reveal}><TryButton label="Consult an RTLS Specialist" /></motion.div></section>
     </>
   )
 }

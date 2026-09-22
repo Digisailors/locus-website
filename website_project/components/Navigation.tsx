@@ -18,17 +18,17 @@ type NavLink = { href: string; label: string; menu?: MenuKey }
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
-  { href: '/discover', label: 'Discover Spaces', menu: 'discover' },
-  { href: '/solutions', label: 'Solutions', menu: 'solutions' },
+  { href: '/discover', label: 'Platform Architecture', menu: 'discover' },
+  { href: '/solutions', label: 'Asset Tracking Solutions', menu: 'solutions' },
   { href: '/resources', label: 'Resources', menu: 'resources' },
 ]
 
 type MobileSection = { heading: string; items: { href: string; label: string }[] }
 
 const mobileSections: Record<MenuKey, MobileSection[]> = {
-  discover: [{ heading: 'Discover Spaces', items: discover.map((d) => ({ href: `/discover/${d.slug}`, label: d.title })) }],
+  discover: [{ heading: 'Discover Platform', items: discover.map((d) => ({ href: `/discover/${d.slug}`, label: d.title })) }],
   solutions: (
-    [['Featured', 'featured'], ['By Usecase', 'usecase'], ['By Industry', 'industry'], ['By Teams', 'team']] as const
+    [['Featured Solutions', 'featured'], ['By Technology & Hardware', 'usecase'], ['By Automotive Sector', 'industry'], ['By Operations Team', 'team']] as const
   ).map(([heading, g]) => ({ heading, items: byGroup(g).map((s) => ({ href: `/solutions/${s.slug}`, label: s.title })) })),
   resources: resourceColumns.map((c) => ({
     heading: c,
@@ -130,7 +130,7 @@ export default function Navigation({ currentPath }: NavigationProps) {
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <Link href="/contact" className="btn btn-primary btn-sm">
-            Request Demo
+            Request Plant Demo
           </Link>
         </div>
 

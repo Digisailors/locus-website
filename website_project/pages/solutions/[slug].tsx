@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, ChevronLeft, ChevronRight, Cloud, Cpu, Plus, Radio, Wifi } from 'lucide-react'
+import { Activity, ArrowRight, ChevronLeft, ChevronRight, Cloud, Cpu, Navigation, Plus, Radio } from 'lucide-react'
 import { solutions, bySlug } from '../../data/solutions'
 import SolutionIcon from '../../components/SolutionIcon'
 
@@ -15,50 +15,60 @@ const reveal = {
   transition: { duration: 0.7, ease },
 }
 
-/** Hero headline overrides (Cisco-style "Real-Time ..." titles) */
+/** Hero headline overrides */
 const heroTitle: Record<string, string> = {
-  'occupancy-monitoring': 'Real-Time Occupancy Monitoring',
-  'asset-tracking': 'Real-Time Asset Tracking',
-  'indoor-navigation': 'Indoor Navigation for Any Building',
-  'location-analytics': 'Location Analytics and Insights',
-  'density-monitoring': 'Live Density Monitoring',
-  'smart-workspaces': 'Smart Workspaces for Hybrid Work',
-  'smart-healthcare': 'Smart Healthcare, Safer Operations',
-  'smart-venues': 'Smart Venues that Delight Guests',
+  'production-line-tracking': 'Real-Time Vehicle Production Line Tracking',
+  'yard-management': 'Finished Vehicle Yard Management & Tracking',
+  'facility-automation': 'Industrial mmWave Lighting & Occupancy Automation',
+  'ble-aoa-gateways': 'BLE AoA Sub-Meter Tracking Gateways',
+  'uwb-precision': 'Centimeter-Precision UWB Assembly Tracking',
+  'lorawan-gps': 'Long-Range Outdoor LoRaWAN GPS Tracking',
+  'mmwave-sensors': 'Industrial mmWave Radar Presence Sensing',
+  'chassis-marriage': 'Chassis-Powertrain Marriage Positioning',
+  'tool-tracking': 'Smart Torque Tool Tracking & Interlocking',
+  'agv-material-flow': 'AGV & Tugger Material Flow Logistics',
+  'lighting-automation': 'Autonomous High-Bay Lighting Control',
+  'worker-safety-occupancy': 'Occupancy & Robotic Cell Safety Monitoring',
+  'cycle-time-analytics': 'Takt Time & Bottleneck Analytics',
+  'passenger-ev': 'Passenger EV Production & Battery Tracking',
+  'commercial-trucks': 'Commercial Truck & Bus Assembly RTLS',
+  'tier1-suppliers': 'Tier-1 Powertrain & Component RTLS',
+  'stamping-body-shop': 'Stamping & Body-in-White WIP Tracking',
 }
 
 /** Hero photography, from the images already on the site */
 const heroImage: Record<string, string> = {
-  'occupancy-monitoring': '/images/transportation_hero.webp',
-  'density-monitoring': '/images/sport_hero.webp',
-  'asset-tracking': '/images/warehouse_tracking.webp',
-  'detect-locate': '/images/manufacturing_hero.webp',
-  'indoor-navigation': '/images/museums_hero.webp',
-  'contextual-engagements': '/images/retail_hero.webp',
-  'location-analytics': '/images/shopping_mall_hero.webp',
-  'energy-efficiency': '/images/real_estate_hero.webp',
-  'space-utilization': '/images/real_estate_hero.webp',
-  'smart-desking': '/images/real_estate_hero.webp',
-  'meeting-room-finder': '/images/real_estate_hero.webp',
-  'smart-rooms': '/images/real_estate_hero.webp',
-  'ap-auto-location': '/images/universities_hero.webp',
-  'smart-workspaces': '/images/real_estate_hero.webp',
-  'smart-healthcare': '/images/healthcare_hero.webp',
-  'smart-venues': '/images/sport_hero.webp',
+  'production-line-tracking': '/images/manufacturing_hero.webp',
+  'yard-management': '/images/transportation_hero.webp',
+  'facility-automation': '/images/warehouse_tracking.webp',
+  'ble-aoa-gateways': '/images/manufacturing_hero.webp',
+  'uwb-precision': '/images/warehouse_tracking.webp',
+  'lorawan-gps': '/images/transportation_hero.webp',
+  'mmwave-sensors': '/images/manufacturing_hero.webp',
+  'chassis-marriage': '/images/manufacturing_hero.webp',
+  'tool-tracking': '/images/warehouse_tracking.webp',
+  'agv-material-flow': '/images/warehouse_tracking.webp',
+  'lighting-automation': '/images/manufacturing_hero.webp',
+  'worker-safety-occupancy': '/images/manufacturing_hero.webp',
+  'cycle-time-analytics': '/images/transportation_hero.webp',
+  'passenger-ev': '/images/manufacturing_hero.webp',
+  'commercial-trucks': '/images/transportation_hero.webp',
+  'tier1-suppliers': '/images/warehouse_tracking.webp',
+  'stamping-body-shop': '/images/manufacturing_hero.webp',
 }
 
 const industryTiles = [
-  { label: 'Offices', slug: 'workspaces', img: '/images/real_estate_hero.webp' },
-  { label: 'Universities', slug: 'education', img: '/images/universities_hero.webp' },
-  { label: 'Retail', slug: 'retail', img: '/images/retail_hero.webp' },
-  { label: 'Venues', slug: 'stadium-venue', img: '/images/sport_hero.webp' },
+  { label: 'Passenger EV Assembly', slug: 'passenger-ev', img: '/images/manufacturing_hero.webp' },
+  { label: 'Commercial Truck & Bus', slug: 'commercial-trucks', img: '/images/transportation_hero.webp' },
+  { label: 'Tier-1 Powertrain & Battery', slug: 'tier1-suppliers', img: '/images/warehouse_tracking.webp' },
+  { label: 'Body Shop & Stamping', slug: 'stamping-body-shop', img: '/images/manufacturing_hero.webp' },
 ]
 
 const resourcePicks = [
-  { tag: 'Webinar', title: 'Smart Spaces Starts Here', date: 'September 21, 2026', href: '/resources/webinars', img: '/images/cards/webinar.svg', tone: 'a' },
-  { tag: 'Articles / Blogs', title: 'Beyond Guest Wi-Fi: What You Can Actually Do with Locus', date: 'September 7, 2026', href: '/resources/blogs', img: '/images/cards/guest.svg', tone: 'b' },
-  { tag: 'On-demand webinar', title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', date: 'September 7, 2026', href: '/resources/webinars', img: '/images/cards/laptop.svg', tone: 'c' },
-  { tag: 'Articles / Blogs', title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', date: 'July 24, 2026', href: '/resources/blogs', img: '/images/cards/asset.svg', tone: 'd' },
+  { tag: 'Whitepaper', title: 'Sub-Meter BLE AoA & Centimeter UWB in Automotive Assembly', date: 'September 2026', href: '/resources/blogs', img: '/images/cards/hardware.svg', tone: 'a' },
+  { tag: 'Case Study', title: 'Eliminating Yard Dwell Time with LoRaWAN GPS Tracking', date: 'August 2026', href: '/resources/stories-from-locus', img: '/images/cards/location.svg', tone: 'b' },
+  { tag: 'Technical Guide', title: 'Industrial mmWave Radar: High-Bay Lighting & Robotic Cell Safety', date: 'August 2026', href: '/resources/blogs', img: '/images/cards/sensors.svg', tone: 'c' },
+  { tag: 'On-Demand Demo', title: 'Live Plant Digital Twin: Tracking 15,000 WIP Vehicles & Tools', date: 'July 2026', href: '/resources/webinars', img: '/images/cards/analytics.svg', tone: 'd' },
 ]
 
 function Faq({ q, a }: { q: string; a: string }) {
@@ -93,24 +103,24 @@ export default function SolutionDetail({ slug }: { slug: string }) {
 
   const t = s.title
   const lower = t.toLowerCase()
-  const bg = s.image ?? heroImage[s.slug] ?? '/images/real_estate_hero.webp'
+  const bg = s.image ?? heroImage[s.slug] ?? '/images/manufacturing_hero.webp'
   const title = heroTitle[s.slug] ?? t
 
   const steps = [
-    { t: 'Connect your network', d: `Locus reads signals from the Wi-Fi and BLE infrastructure you already run, so ${lower} starts without new hardware.`, icon: 'Wifi' },
-    { t: 'Locate people and things', d: 'Positioning places every person, device and asset on a live, multi-floor map.', icon: 'MapPin' },
-    { t: 'Analyze what happens', d: `Dashboards turn movement into ${s.metrics[0].label.toLowerCase()}, dwell and flow insight.`, icon: 'BarChart3' },
-    { t: 'Act on the insight', d: 'Trigger alerts, workflows and experiences straight from what the data shows.', icon: 'Activity' },
+    { t: 'Deploy BLE AoA, UWB & LoRaWAN Sensors', d: `Locus connects with BLE AoA arrays, UWB anchors, LoRaWAN gateways, and mmWave radar nodes across the plant floor so ${lower} starts with zero blind spots.`, icon: 'Radio' },
+    { t: 'Locate chassis, carriers & tools', d: 'Industrial positioning engine places every vehicle chassis, AGV carrier, torque tool, and worker on a live 3D factory digital twin.', icon: 'Crosshair' },
+    { t: 'Analyze takt time & bottlenecks', d: `MES dashboards convert telemetry into live station cycle times, dwell durations, and supply flow heatmaps.`, icon: 'BarChart3' },
+    { t: 'Automate line stops & facilities', d: 'Trigger automated lighting dimming, tool interlocks, and car-carrier staging workflows straight from real-time asset coordinates.', icon: 'Activity' },
   ]
   const faqs = [
-    { q: `What is ${lower} with Locus?`, a: `${s.description} It runs on the wireless network you already have, so there is nothing to rip and replace.` },
-    { q: `How does ${lower} improve efficiency?`, a: `${s.benefits[0].description} ${s.benefits[2].description}` },
-    { q: `Can ${lower} help reduce costs?`, a: `Yes. Customers typically see results such as ${s.metrics[0].value} ${s.metrics[0].label.toLowerCase()} and ${s.metrics[1].value} ${s.metrics[1].label.toLowerCase()}.` },
-    { q: `Does ${lower} support energy and sustainability goals?`, a: 'Yes. Accurate, real-time knowledge of how spaces are used helps you condition, light and clean only what is needed, and report the savings with auditable data.' },
+    { q: `What is ${lower} with Locus?`, a: `${s.description} It unifies BLE AoA, UWB centimeter positioning, LoRaWAN outdoor GPS, and mmWave radar into an industrial RTLS architecture.` },
+    { q: `How does ${lower} improve plant efficiency?`, a: `${s.benefits[0].description} ${s.benefits[2].description}` },
+    { q: `Can ${lower} help reduce manufacturing costs?`, a: `Yes. Automotive plants typically achieve ${s.metrics[0].value} ${s.metrics[0].label.toLowerCase()} and ${s.metrics[1].value} ${s.metrics[1].label.toLowerCase()}.` },
+    { q: `Does ${lower} support plant energy & sustainability goals?`, a: 'Yes. 60GHz mmWave radar sensors detect human micro-motion across high-bay zones to dim lighting automatically during shift transitions and breaks, cutting facility power by up to 45%.' },
   ]
   const cases = [
-    { name: 'A leading university', text: `Used ${lower} to understand how campus buildings were really used and reshaped its space plan.`, stat: s.metrics[0], img: '/images/universities_hero.webp' },
-    { name: 'A university hospital', text: `Adopted ${lower} to give staff faster, safer access to the people and equipment they need.`, stat: s.metrics[1], img: '/images/healthcare_hero.webp' },
+    { name: 'Global Passenger EV Assembly Plant', text: `Deployed BLE AoA and UWB across 4 assembly lines, cutting chassis search time to under 10 seconds and eliminating marriage misalignments.`, stat: s.metrics[0], img: '/images/manufacturing_hero.webp' },
+    { name: 'Commercial Vehicle Staging Yard', text: `Integrated LoRaWAN GPS trackers across 120-acre holding yards, slashing truck carrier loading dispatch delays by 70%.`, stat: s.metrics[1], img: '/images/transportation_hero.webp' },
   ]
   const go = (n: number) => { setDir(n > step ? 1 : -1); setStep((n + steps.length) % steps.length) }
 
@@ -179,7 +189,7 @@ export default function SolutionDetail({ slug }: { slug: string }) {
         {/* Audience */}
         <section className="sp-section sp-section--tint">
           <div className="sol-wrap sp-aud">
-            {[['IT', s.features.slice(0, 2)], ['Facilities', s.features.slice(2)]].map(([who, list], i) => (
+            {[['Manufacturing & Plant Operations', s.features.slice(0, 2)], ['Industrial Engineering & Facilities', s.features.slice(2)]].map(([who, list], i) => (
               <motion.div key={who as string} className="sp-aud__col" {...reveal} transition={{ ...reveal.transition, delay: i * 0.1 }}>
                 <span className="sol-eyebrow">For</span>
                 <h3>{who as string}</h3>
@@ -219,7 +229,7 @@ export default function SolutionDetail({ slug }: { slug: string }) {
           <div className="sol-wrap">
             <motion.h2 className="sp-h2 sp-h2--light" {...reveal}>The technology behind {lower}</motion.h2>
             <motion.div className="sp-tech" {...reveal}>
-              {[[Wifi, 'Wi-Fi & BLE signals'], [Radio, 'Sensors & tags'], [Cpu, 'Locus location engine'], [Cloud, 'Locus cloud & APIs']].map(([Icon, label]: any, i) => (
+              {[[Radio, 'BLE AoA & UWB Gateways'], [Navigation, 'LoRaWAN Outdoor GPS'], [Activity, 'mmWave Radar Nodes'], [Cpu, 'Locus RTLS Engine']].map(([Icon, label]: any, i) => (
                 <div key={label} className="sp-tech__node" style={{ animationDelay: `${i * 0.4}s` }}>
                   <span><Icon size={30} /></span>
                   <b>{label}</b>

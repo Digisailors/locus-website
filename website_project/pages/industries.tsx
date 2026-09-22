@@ -5,8 +5,8 @@ export default function IndustriesPage() {
   return (
     <>
       <Head>
-        <title>Industries | Spatial Intelligence Platform</title>
-        <meta name="description" content="Spatial intelligence solutions for Manufacturing, Healthcare, Retail, Logistics, Education, and 10+ other industries." />
+        <title>Automotive Sectors &amp; Plants | Locus Spatial Systems</title>
+        <meta name="description" content="Industrial RTLS and automation solutions for EV manufacturing, commercial trucks, Tier-1 powertrain suppliers, stamping, and finished vehicle yards." />
       </Head>
 
       <div className="bg-surface-neutral">
@@ -20,13 +20,13 @@ export default function IndustriesPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
             <span className="text-caption text-accent-cyan font-medium uppercase tracking-wider">
-              Industries
+              Automotive Sectors
             </span>
             <h1 className="text-display-1 text-white mt-4 mb-6">
-              Solutions for Every Industry
+              Automotive Manufacturing &amp; Logistics
             </h1>
             <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
-              Transform your industry with spatial intelligence. Our platform adapts to your unique requirements across 15+ sectors.
+              From high-speed EV skateboard lines and stamping presses to multi-acre finished vehicle holding yards and export docks.
             </p>
           </div>
         </section>

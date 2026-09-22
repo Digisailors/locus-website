@@ -6,8 +6,8 @@ export default function UseCasesPage() {
   return (
     <>
       <Head>
-        <title>Use Cases | Spatial Intelligence Platform</title>
-        <meta name="description" content="Real-world use cases and ROI: occupancy monitoring, asset tracking, contextual engagement, safety & security, indoor navigation, and location analytics." />
+        <title>Automotive RTLS Use Cases &amp; ROI | Locus Spatial Systems</title>
+        <meta name="description" content="Automotive manufacturing use cases: Assembly line WIP tracking, finished vehicle yard logistics, mmWave lighting automation, smart torque tool interlocks, and takt time bottleneck analytics." />
       </Head>
 
       <div className="bg-surface-neutral">
@@ -21,13 +21,13 @@ export default function UseCasesPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
             <span className="text-caption text-accent-cyan font-medium uppercase tracking-wider">
-              Use Cases
+              Industrial Use Cases
             </span>
             <h1 className="text-display-1 text-white mt-4 mb-6">
-              Business Outcomes
+              Automotive Production Outcomes
             </h1>
             <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
-              Drive measurable results with location-powered insights and automation across your enterprise.
+              Eliminate assembly line bottlenecks, speed up finished vehicle yard dispatch, and cut plant lighting electricity by 45% with industrial RTLS and mmWave radar.
             </p>
           </div>
         </section>

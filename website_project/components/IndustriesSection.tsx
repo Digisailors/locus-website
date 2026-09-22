@@ -1,116 +1,49 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { 
-  Briefcase, Building2, Factory, Plane, ShoppingCart, 
-  GraduationCap, HeartPulse,Car, Clapperboard, Landmark,
-  Building,Construction, Radio, Truck
-} from 'lucide-react'
+import { Car, Truck, Factory, Layers, Radio, Building2 } from 'lucide-react'
 
 const industries = [
   {
-    icon: Briefcase,
-    name: 'Oil & Gas',
-    description: 'Asset tracking and personnel safety in hazardous environments',
-    image: '/images/oil_gas_hero.webp',
-    features: ['HSE Compliance', 'Asset Utilization', 'Emergency Response'],
-  },
-  {
-    icon: Landmark,
-    name: 'Museums',
-    description: 'Visitor navigation and exhibit engagement analytics',
-    image: '/images/museums_hero.webp',
-    features: ['Visitor Flow', 'Interactive Guides', 'Asset Protection'],
-  },
-  {
-    icon: ShoppingCart,
-    name: 'Shopping Mall',
-    description: 'Wayfinding and location-based marketing',
-    image: '/images/shopping_mall_hero.webp',
-    features: ['Indoor Navigation', 'Retail Analytics', 'Smart Parking'],
-  },
-  {
-    icon: GraduationCap,
-    name: 'Universities',
-    description: 'Campus navigation and student analytics',
-    image: '/images/universities_hero.webp',
-    features: ['Campus Maps', 'Resource Booking', 'Safety Monitoring'],
-  },
-  {
     icon: Car,
-    name: 'Automotive Services',
-    description: 'Service center workflow optimization',
-    image: '/images/automotive_services_hero.webp',
-    features: ['Vehicle Tracking', 'Service Bay Management', 'Customer UX'],
-  },
-  {
-    icon: Clapperboard,
-    name: 'Sport & Entertainment',
-    description: 'Crowd management and venue navigation',
-    image: '/images/sport_hero.webp',
-    features: ['Seat Finding', 'Concession Services', 'Crowd Analytics'],
-  },
-  {
-    icon: Factory,
-    name: 'Manufacturing',
-    description: 'Production line and asset tracking',
+    name: 'Passenger Cars & EV Manufacturing',
+    description: 'High-speed line tracking, EV skateboard battery marriage, and unibody assembly with BLE AoA and UWB.',
     image: '/images/manufacturing_hero.webp',
-    features: ['Inventory Tracking', 'Safety Zones', 'Efficiency Analytics'],
-  },
-  {
-    icon: HeartPulse,
-    name: 'Healthcare',
-    description: 'Patient navigation and equipment tracking',
-    image: '/images/healthcare_hero.webp',
-    features: ['Patient Wayfinding', 'Asset Management', 'Staff Coordination'],
-  },
-  {
-    icon: Building2,
-    name: 'Real Estate',
-    description: 'Space utilization and workplace optimization',
-    image: '/images/real_estate_hero.webp',
-    features: ['Occupancy Analytics', 'Smart Desking', 'Visitor Management'],
-  },
-  {
-    icon: Construction,
-    name: 'Construction',
-    description: 'Equipment and worker safety monitoring',
-    image: '/images/construction_hero.webp',
-    features: ['Equipment Tracking', 'Worker Safety', 'Site Security'],
-  },
-  {
-    icon: Plane,
-    name: 'Transportation',
-    description: 'Airport and terminal navigation',
-    image: '/images/transportation_hero.webp',
-    features: ['Gate Navigation', 'Baggage Tracking', 'Passenger Flow'],
-  },
-  {
-    icon: Radio,
-    name: 'Retail',
-    description: 'In-store navigation and customer analytics',
-    image: '/images/retail_hero.webp',
-    features: ['Product Location', 'Shopping Analytics', 'Promotions'],
+    features: ['Battery Pack Marriage', 'Sequencing Verification', 'High-Speed Line Takt Times'],
   },
   {
     icon: Truck,
-    name: 'Logistics',
-    description: 'Warehouse and inventory management',
+    name: 'Commercial Trucks & Heavy Vehicles',
+    description: 'Heavy-duty frame rail, cab module, and multi-axle configuration tracking across assembly halls and test tracks.',
+    image: '/images/transportation_hero.webp',
+    features: ['Heavy Chassis RTLS', 'LoRaWAN Test Track GPS', 'Modular Cab Marriage'],
+  },
+  {
+    icon: Factory,
+    name: 'Tier-1 Powertrain & Component Plants',
+    description: 'Engine blocks, transmissions, and returnable packaging racks tracked just-in-sequence (JIS) to OEM gates.',
     image: '/images/logistics_hero.webp',
-    features: ['Inventory Tracking', 'Forklift Monitoring', 'Picking Routes'],
+    features: ['JIS Delivery Validation', 'Returnable Container Tracking', 'Sub-meter Parts Bin Mesh'],
   },
   {
-    icon: Building,
-    name: 'Offices',
-    description: 'Workspace management and meeting rooms',
-    image: '/images/automotive_nav_hero.webp',
-    features: ['Desk Booking', 'Room Finder', 'Visitor Management'],
+    icon: Layers,
+    name: 'Stamping & Body-in-White (BIW)',
+    description: 'Multi-ton press stamping dies, unibody weld fixtures, and metal coils tracked with harsh-RF-immune locators.',
+    image: '/images/construction_hero.webp',
+    features: ['Heavy Stamping Die Tracking', 'Robotic Weld Cell Fixtures', 'Metal Multipath Mitigation'],
   },
   {
-    icon: Clapperboard,
-    name: 'Culture & Entertainment',
-    description: 'Theater and venue experiences',
-    image: '/images/culture_hero.webp',
-    features: ['Seat Navigation', 'Queue Management', 'Guest Services'],
+    icon: Radio,
+    name: 'Paint Shop Operations',
+    description: 'High-temperature oven-rated tags and mmWave radar lighting control for skids, E-coat tanks, and curing ovens.',
+    image: '/images/oil_gas_hero.webp',
+    features: ['250°C Oven-Rated Tags', 'Color Sequence Verification', 'Automated Booth Lighting'],
+  },
+  {
+    icon: Building2,
+    name: 'Finished Vehicle Yards & Export Docks',
+    description: 'Long-range LoRaWAN GPS locating across multi-acre holding lots, railhead dispatch, and ocean Ro-Ro vessel loading.',
+    image: '/images/automotive_services_hero.webp',
+    features: ['Sub-2m Slot Locating', '15km LoRaWAN Range', 'Zero Monthly SIM Fees'],
   },
 ]
 
@@ -128,7 +61,7 @@ export default function IndustriesSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             className="text-caption text-accent-cyan font-medium uppercase tracking-wider"
           >
-            Industries
+            Automotive Sectors
           </motion.span>
           
           <motion.h2
@@ -137,7 +70,7 @@ export default function IndustriesSection() {
             transition={{ delay: 0.1 }}
             className="text-h1 text-primary-navy mt-4 mb-6"
           >
-            Solutions for Every Industry
+            Built for Automotive Manufacturing &amp; Logistics
           </motion.h2>
           
           <motion.p
@@ -146,8 +79,7 @@ export default function IndustriesSection() {
             transition={{ delay: 0.2 }}
             className="text-body-lg text-charcoal-grey max-w-2xl mx-auto"
           >
-            Transform your industry with spatial intelligence. From manufacturing to healthcare,
-            our platform adapts to your unique requirements.
+            Purpose-built industrial RTLS and facility automation across every phase of vehicle production, assembly, and outdoor holding yard logistics.
           </motion.p>
         </div>
 

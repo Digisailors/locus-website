@@ -3,12 +3,16 @@ import { ArrowRight } from 'lucide-react'
 import { byGroup } from '../data/solutions'
 import SolutionIcon from './SolutionIcon'
 
-const cardArt: Record<string, string> = { 'smart-workspaces': '/images/cards/office.svg', 'smart-healthcare': '/images/cards/hospital.svg', 'smart-venues': '/images/cards/stadium.svg' }
+const cardArt: Record<string, string> = {
+  'production-line-tracking': '/images/cards/asset.svg',
+  'yard-management': '/images/cards/map.svg',
+  'facility-automation': '/images/cards/analytics.svg',
+}
 
 const columns = [
-  { heading: 'By Usecase', items: byGroup('usecase') },
-  { heading: 'By Industry', items: byGroup('industry') },
-  { heading: 'By Teams', items: byGroup('team') },
+  { heading: 'By Technology & Hardware', items: byGroup('usecase') },
+  { heading: 'By Automotive Sector', items: byGroup('industry') },
+  { heading: 'By Operations Team', items: byGroup('team') },
 ]
 
 export default function SolutionsMegaMenu({ onNavigate }: { onNavigate: () => void }) {
@@ -43,7 +47,7 @@ export default function SolutionsMegaMenu({ onNavigate }: { onNavigate: () => vo
             ))}
           </div>
           <Link href="/contact" onClick={onNavigate} className="mega__cta">
-            Experience Locus <ArrowRight size={18} />
+            Request Plant Assessment <ArrowRight size={18} />
           </Link>
         </div>
 

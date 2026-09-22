@@ -16,18 +16,18 @@ type Kind = 'Webinar' | 'On-demand webinar' | 'Articles / Blogs' | 'Case Study'
 interface Item { title: string; kind: Kind; date: string; industry: string; tone: 'a' | 'b' | 'c' | 'd'; img?: string; tags: string[] }
 
 export const items: Item[] = [
-  { title: 'Smart Spaces Starts Here', kind: 'Webinar', date: 'September 21, 2026', industry: 'General', tone: 'a', img: '/images/cards/webinar.svg', tags: ['smart workspaces'] },
-  { title: 'Beyond Guest Wi-Fi: What You Can Actually Do with the Locus Captive Portal', kind: 'Articles / Blogs', date: 'September 7, 2026', industry: 'Retail', tone: 'b', img: '/images/cards/guest.svg', tags: ['guest wi-fi', 'engagements'] },
-  { title: 'Session 1: Onboard Your Guests and Employees with Captive Portals', kind: 'On-demand webinar', date: 'September 7, 2026', industry: 'Hospitality', tone: 'c', img: '/images/cards/laptop.svg', tags: ['guest wi-fi'] },
-  { title: 'Introducing Locus Asset Tracking: Your Network Just Learned a New Trick', kind: 'Articles / Blogs', date: 'July 24, 2026', industry: 'Healthcare', tone: 'd', img: '/images/cards/asset.svg', tags: ['asset tracking'] },
-  { title: 'Care Re-Imagined: The Smart Hospital', kind: 'On-demand webinar', date: 'July 2, 2026', industry: 'Healthcare', tone: 'a', img: '/images/cards/hospital.svg', tags: ['asset tracking', 'people safety'] },
-  { title: 'How a University Campus Reclaimed 30% of Its Teaching Space', kind: 'Case Study', date: 'June 18, 2026', industry: 'Education', tone: 'b', img: '/images/universities_hero.webp', tags: ['space utilization', 'occupancy monitoring'] },
-  { title: 'Wi-Fi 7 and Location: What Changes for Indoor Positioning', kind: 'Articles / Blogs', date: 'June 3, 2026', industry: 'General', tone: 'c', img: '/images/cards/blog.svg', tags: ['indoor navigation'] },
-  { title: 'A Global Retailer Turns Footfall into Conversion', kind: 'Case Study', date: 'May 20, 2026', industry: 'Retail', tone: 'd', img: '/images/retail_hero.webp', tags: ['location analytics'] },
-  { title: 'Hybrid Work Playbook: Desk Booking that People Actually Use', kind: 'On-demand webinar', date: 'May 6, 2026', industry: 'Workspaces', tone: 'a', img: '/images/cards/laptop.svg', tags: ['smart desking', 'smart workspaces'] },
-  { title: 'Finding Equipment 40% Faster in a Regional Hospital', kind: 'Case Study', date: 'April 22, 2026', industry: 'Healthcare', tone: 'b', img: '/images/healthcare_hero.webp', tags: ['asset tracking'] },
-  { title: 'Crowd Safety at Scale: Density Monitoring for Venues', kind: 'Articles / Blogs', date: 'April 8, 2026', industry: 'Venues', tone: 'c', img: '/images/cards/stadium.svg', tags: ['density monitoring'] },
-  { title: 'Energy Savings You Can Prove: Occupancy-Driven Building Control', kind: 'Webinar', date: 'March 25, 2026', industry: 'Workspaces', tone: 'd', img: '/images/cards/analytics.svg', tags: ['energy efficiency'] },
+  { title: 'Sub-Meter BLE AoA in Automotive Assembly Lines', kind: 'Articles / Blogs', date: 'September 21, 2026', industry: 'Automotive', tone: 'a', img: '/images/cards/hardware.svg', tags: ['ble aoa', 'asset tracking'] },
+  { title: 'Centimeter UWB for Chassis-Powertrain Marriage', kind: 'On-demand webinar', date: 'September 14, 2026', industry: 'Automotive', tone: 'b', img: '/images/cards/location.svg', tags: ['uwb precision', 'production line'] },
+  { title: 'LoRaWAN GPS Tracking Across 120-Acre Vehicle Yards', kind: 'Case Study', date: 'September 7, 2026', industry: 'Logistics', tone: 'c', img: '/images/transportation_hero.webp', tags: ['lorawan gps', 'yard management'] },
+  { title: 'mmWave Radar for High-Bay Lighting & Cell Safety', kind: 'Articles / Blogs', date: 'August 28, 2026', industry: 'Manufacturing', tone: 'd', img: '/images/cards/sensors.svg', tags: ['mmwave sensors', 'lighting automation'] },
+  { title: 'How a Leading EV OEM Reduced WIP Search Time to 10 Seconds', kind: 'Case Study', date: 'August 18, 2026', industry: 'Automotive', tone: 'a', img: '/images/manufacturing_hero.webp', tags: ['asset tracking', 'production line'] },
+  { title: 'Preventing Mis-Torque: UWB Interlocking on the Line', kind: 'Webinar', date: 'August 5, 2026', industry: 'Automotive', tone: 'b', img: '/images/cards/analytics.svg', tags: ['uwb precision', 'tool tracking'] },
+  { title: 'Takt Time Optimization with Real-Time Asset Telemetry', kind: 'Articles / Blogs', date: 'July 22, 2026', industry: 'Industrial', tone: 'c', img: '/images/cards/blog.svg', tags: ['takt time', 'analytics'] },
+  { title: 'Autonomous Material Staging with AGV & Tugger RTLS', kind: 'Case Study', date: 'July 10, 2026', industry: 'Manufacturing', tone: 'd', img: '/images/warehouse_tracking.webp', tags: ['asset tracking', 'agv flow'] },
+  { title: 'Slashing Plant Lighting Energy by 45% with 60GHz mmWave', kind: 'On-demand webinar', date: 'June 29, 2026', industry: 'Facilities', tone: 'a', img: '/images/cards/sensors.svg', tags: ['mmwave sensors', 'energy efficiency'] },
+  { title: 'Eliminating Outbound Carrier Delays in Finished Vehicle Yards', kind: 'Case Study', date: 'June 15, 2026', industry: 'Automotive', tone: 'b', img: '/images/transportation_hero.webp', tags: ['lorawan gps', 'yard management'] },
+  { title: 'Industrial Sensor Fusion: Integrating BLE AoA, UWB and LoRaWAN into SAP', kind: 'Articles / Blogs', date: 'June 1, 2026', industry: 'Industrial IT', tone: 'c', img: '/images/cards/hardware.svg', tags: ['ble aoa', 'mes integration'] },
+  { title: 'Micro-Motion Detection vs Optical Cameras for Robotic Cell Safety', kind: 'Webinar', date: 'May 18, 2026', industry: 'Safety', tone: 'd', img: '/images/cards/analytics.svg', tags: ['mmwave sensors', 'worker safety'] },
 ]
 
 const PAGE = 6
@@ -99,11 +99,11 @@ function Grid({ list }: { list: Item[] }) {
 }
 
 /* ============ Stories ============ */
-const quick = ['A hospital finds equipment in seconds', 'Reclaiming campus space with real data', 'Guest Wi-Fi that turns into loyalty', 'Smart desking for a hybrid workforce', 'Keeping crowds safe at match day', 'One map for a global retailer', 'Inside a smart hospital', 'Energy savings from occupancy'].map((t, i) => ({ t, d: ['2:14', '3:05', '1:48', '2:37', '4:02', '2:59', '3:21', '1:55'][i] }))
+const quick = ['Locating vehicle chassis in under 10 seconds', 'Centimeter UWB chassis marriage alignment', 'Slashing yard dispatch time by 70%', 'mmWave high-bay lighting saves 45% power', 'Smart torque tool tracking prevents errors', 'LoRaWAN GPS across 120-acre finished yard', 'Real-time plant digital twin with SAP sync', 'Robotic cell non-optical safety detection'].map((t, i) => ({ t, d: ['2:14', '3:05', '1:48', '2:37', '4:02', '2:59', '3:21', '1:55'][i] }))
 const quotes = [
-  { q: 'With Locus we can reach customers at the right moment and understand shopping habits far better than before.', n: 'IT Product Owner', o: 'Retail group' },
-  { q: 'We reduced a 30-minute journey to find a room to just 2 minutes, saving significant time across a large workforce.', n: 'Program Manager', o: 'Financial services' },
-  { q: 'Clinicians now have the right equipment in the right place at the right time, so frontline staff have more time to care.', n: 'Director of Digital Transformation', o: 'Health system' },
+  { q: 'Locus transformed our assembly line. We track 15,000 WIP chassis simultaneously and search time dropped from 15 minutes to under 10 seconds.', n: 'VP of Manufacturing Operations', o: 'Global EV Manufacturer' },
+  { q: 'Our finished vehicle yard covers 120 acres. With LoRaWAN GPS trackers, haulers are loaded and dispatched in a fraction of the time with zero lost cars.', n: 'Finished Vehicle Logistics Director', o: 'Automotive OEM' },
+  { q: 'Replacing optical cameras with mmWave radar for high-bay lighting and workcell safety cut our factory energy bill by 45% with total worker privacy.', n: 'Head of Industrial Facilities & Energy', o: 'Commercial Truck Assembly' },
 ]
 
 export function Stories() {
@@ -114,11 +114,11 @@ export function Stories() {
   const more = cases
   return (
     <>
-      <Hero title="stories from locus"><SearchBox value={q} onChange={setQ} placeholder="Search stories" /></Hero>
+      <Hero title="manufacturing customer stories"><SearchBox value={q} onChange={setQ} placeholder="Search stories" /></Hero>
       <section className="rp-body">
         <div className="rp-wrap">
           <div className="rp-tabs" role="tablist">
-            {([['quick', 'Quick Watch'], ['cases', 'Case Studies'], ['quotes', 'Testimonials']] as const).map(([k, l]) => (
+            {([['quick', 'Quick Watch'], ['cases', 'Case Studies'], ['quotes', 'OEM Testimonials']] as const).map(([k, l]) => (
               <button key={k} role="tab" aria-selected={tab === k} className={tab === k ? 'is-on' : ''} onClick={() => setTab(k)}>
                 {l}{tab === k && <motion.i layoutId="rp-tab" transition={{ type: 'spring', stiffness: 420, damping: 34 }} />}
               </button>
@@ -129,7 +129,7 @@ export function Stories() {
               <motion.div key="q" className="rp-videos" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.35, ease }}>
                 {quick.filter((v) => v.t.toLowerCase().includes(q.toLowerCase())).map((v, i) => (
                   <motion.a key={v.t} href="#" onClick={(e) => e.preventDefault()} className="rp-video" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05, duration: 0.5, ease }}>
-                    <span className={`rp-video__thumb t-${'abcd'[i % 4]}`}><img src={['/images/cards/hospital.svg','/images/cards/office.svg','/images/cards/guest.svg','/images/cards/laptop.svg','/images/cards/stadium.svg','/images/cards/mall.svg','/images/cards/asset.svg','/images/cards/analytics.svg'][i % 8]} alt="" loading="lazy" /><Play size={30} fill="currentColor" /></span>
+                    <span className={`rp-video__thumb t-${'abcd'[i % 4]}`}><img src={['/images/cards/hardware.svg','/images/cards/location.svg','/images/cards/sensors.svg','/images/cards/analytics.svg','/images/cards/blog.svg','/images/cards/ebook.svg','/images/cards/asset.svg','/images/cards/webinar.svg'][i % 8]} alt="" loading="lazy" /><Play size={30} fill="currentColor" /></span>
                     <span className="rp-video__len">{v.d}</span>
                     <b>{v.t}</b>
                   </motion.a>
@@ -162,7 +162,7 @@ export function Stories() {
 
 /* ============ Blogs / Resource centre ============ */
 const filters = ['All', 'Articles / Blogs', 'Webinar', 'On-demand webinar', 'Case Study'] as const
-const popular = ['asset tracking', 'occupancy monitoring', 'smart workspaces', 'guest wi-fi', 'indoor navigation', 'location analytics', 'energy efficiency', 'density monitoring', 'smart desking', 'space utilization']
+const popular = ['asset tracking', 'ble aoa', 'uwb precision', 'lorawan gps', 'mmwave sensors', 'production line', 'yard management', 'lighting automation', 'takt time', 'mes integration']
 
 export function Blogs() {
   const [f, setF] = useState<(typeof filters)[number]>('Articles / Blogs')
@@ -171,7 +171,7 @@ export function Blogs() {
   const list = items.filter((i) => (f === 'All' || i.kind === f) && i.title.toLowerCase().includes(q.toLowerCase()) && (!tag || i.tags.includes(tag)))
   return (
     <>
-      <Hero title="resources" sub="See the latest Locus news & stories"><SearchBox value={q} onChange={setQ} placeholder="Search resources" /></Hero>
+      <Hero title="manufacturing rtls resources" sub="Latest insights on industrial asset tracking, BLE AoA, UWB & mmWave automation"><SearchBox value={q} onChange={setQ} placeholder="Search resources" /></Hero>
       <section className="rp-body">
         <div className="rp-wrap">
           <div className="rp-chips">
@@ -198,13 +198,13 @@ export function Webinars() {
         <div className="rp-feature__grid" aria-hidden="true" />
         <div className="rp-wrap rp-feature__inner">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease }}>
-            <span className="rp-feature__tag">Webinar</span>
-            <h1>Smart Spaces Starts Here</h1>
-            <p>A guided introduction to turning your network into a sensor for smart spaces. September 21, 2026 &middot; 30 minutes</p>
-            <Link href="/contact" className="rp-btn">Register now <ArrowRight size={18} /></Link>
+            <span className="rp-feature__tag">Featured Webinar</span>
+            <h1>Sub-Meter RTLS in Automotive Assembly</h1>
+            <p>A technical deep dive on deploying BLE AoA locator arrays, UWB precision anchors, and mmWave radar across vehicle assembly plants. September 21, 2026 &middot; 45 minutes</p>
+            <Link href="/contact" className="rp-btn">Register for Live Session <ArrowRight size={18} /></Link>
           </motion.div>
           <motion.div className="rp-feature__art" initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease, delay: 0.15 }} aria-hidden="true">
-            <img src="/images/cards/webinar.svg" alt="" /><span><Play size={44} fill="currentColor" /></span>
+            <img src="/images/cards/hardware.svg" alt="" /><span><Play size={44} fill="currentColor" /></span>
           </motion.div>
         </div>
       </section>
@@ -215,28 +215,28 @@ export function Webinars() {
 
 /* ============ E-books ============ */
 const books = [
-  { t: 'Indoor Positioning Explained', d: 'How Wi-Fi, BLE and UWB compare, and when to use each.', pages: 28 },
-  { t: 'The Hybrid Workplace Playbook', d: 'Turning utilisation data into layout and lease decisions.', pages: 34 },
-  { t: 'The Smart Hospital Handbook', d: 'A practical roadmap for equipment and patient-flow visibility.', pages: 30 },
-  { t: 'Smart Venues Field Guide', d: 'Crowd safety, wayfinding and revenue for stadiums and malls.', pages: 26 },
-  { t: 'Sustainable Buildings with Occupancy Data', d: 'Prove energy savings with presence-based control.', pages: 22 },
-  { t: 'Privacy by Design in Location Services', d: 'Consent, anonymisation and retention done right.', pages: 18 },
+  { t: 'Industrial RTLS: BLE AoA, UWB & LoRaWAN Compared', d: 'Choosing the right positioning architecture for stamping, assembly, and outdoor vehicle yards.', pages: 32 },
+  { t: 'The Automotive Factory Digital Twin Guide', d: 'Integrating real-time asset telemetry into SAP S/4HANA, Siemens Opcenter, and Rockwell SCADA.', pages: 38 },
+  { t: 'High-Bay Lighting & Safety with 60GHz mmWave', d: 'How micro-motion radar saves 45% energy while protecting worker safety around robotic cells.', pages: 26 },
+  { t: 'Finished Vehicle Yard Management Handbook', d: 'Eliminating yard search dwell and automating multi-car hauler dispatching with LoRaWAN GPS.', pages: 30 },
+  { t: 'Smart Torque Tool Tracking & Interlocks', d: 'Enforcing zero-defect assembly by geofencing calibrated torque tools to specific vehicle VINs.', pages: 22 },
+  { t: 'Cybersecurity & Scalability in Industrial IoT', d: 'TLS 1.3 encryption, air-gapped on-premise clusters, and hardware security modules.', pages: 20 },
 ]
 
 export function Ebooks() {
   const [done, setDone] = useState<string | null>(null)
   return (
     <>
-      <Hero title="e-books" sub="Read in-depth guides from experts" />
+      <Hero title="manufacturing guides & e-books" sub="In-depth technical guides for automotive plant directors and industrial engineers" />
       <section className="rp-body">
         <div className="rp-wrap rp-books">
           {books.map((b, i) => (
             <motion.article key={b.t} className="rp-book" {...reveal} transition={{ ...reveal.transition, delay: (i % 3) * 0.08 }}>
-              <div className={`rp-book__cover t-${'abcd'[i % 4]}`} style={{ backgroundImage: `linear-gradient(180deg, rgba(11,31,51,.15), rgba(11,31,51,.85)), url(${['/images/cards/ebook.svg','/images/cards/office.svg','/images/cards/hospital.svg','/images/cards/stadium.svg','/images/cards/analytics.svg','/images/cards/guest.svg'][i % 6]})` }}><span>{b.t}</span><small>Locus</small></div>
+              <div className={`rp-book__cover t-${'abcd'[i % 4]}`} style={{ backgroundImage: `linear-gradient(180deg, rgba(11,31,51,.15), rgba(11,31,51,.85)), url(${['/images/cards/hardware.svg','/images/cards/location.svg','/images/cards/sensors.svg','/images/cards/analytics.svg','/images/cards/blog.svg','/images/cards/ebook.svg'][i % 6]})` }}><span>{b.t}</span><small>Locus Industrial</small></div>
               <h3>{b.t}</h3>
               <p>{b.d}</p>
               <button className="rp-btn rp-btn--outline" onClick={() => setDone(b.t)}>
-                {done === b.t ? 'Check your inbox' : <>Download <Download size={16} /></>}
+                {done === b.t ? 'Check your inbox' : <>Download PDF <Download size={16} /></>}
               </button>
               <small>{b.pages} pages &middot; PDF</small>
             </motion.article>
@@ -249,12 +249,12 @@ export function Ebooks() {
 
 /* ============ Events ============ */
 const events = [
-  { m: 'OCT', d: '06', t: 'Locus Smart Spaces Summit', l: 'Amsterdam, NL', k: 'Summit' },
-  { m: 'OCT', d: '21', t: 'Workplace Innovation Expo', l: 'London, UK', k: 'Conference' },
-  { m: 'NOV', d: '04', t: 'Healthcare Technology Showcase', l: 'Chicago, US', k: 'Showcase' },
-  { m: 'NOV', d: '18', t: 'Retail Connect Live', l: 'Singapore', k: 'Conference' },
-  { m: 'DEC', d: '02', t: 'Smart Venues Roundtable', l: 'Online', k: 'Webinar' },
-  { m: 'JAN', d: '20', t: 'Locus Partner Summit', l: 'Dubai, UAE', k: 'Summit' },
+  { m: 'OCT', d: '06', t: 'Automotive Manufacturing Summit', l: 'Detroit, US', k: 'Summit' },
+  { m: 'OCT', d: '21', t: 'Industrial RTLS & Industry 4.0 Expo', l: 'Stuttgart, DE', k: 'Conference' },
+  { m: 'NOV', d: '04', t: 'EV Battery & Powertrain Assembly Showcase', l: 'Munich, DE', k: 'Showcase' },
+  { m: 'NOV', d: '18', t: 'Automated Factory Logistics Summit', l: 'Nagoya, JP', k: 'Conference' },
+  { m: 'DEC', d: '02', t: 'mmWave Industrial Lighting Webinar', l: 'Online', k: 'Webinar' },
+  { m: 'JAN', d: '20', t: 'Global Automotive RTLS Partner Summit', l: 'Tokyo, JP', k: 'Summit' },
 ]
 
 export function Events() {
@@ -262,7 +262,7 @@ export function Events() {
   const ks = ['All', 'Summit', 'Conference', 'Showcase', 'Webinar']
   return (
     <>
-      <Hero title="events calendar" sub="Explore the schedule of global events, summits, and showcases" />
+      <Hero title="manufacturing events calendar" sub="Meet Locus industrial RTLS engineers at global automotive & manufacturing summits" />
       <section className="rp-body">
         <div className="rp-wrap">
           <div className="rp-chips">{ks.map((k) => <button key={k} className={kind === k ? 'is-on' : ''} onClick={() => setKind(k)}>{k}</button>)}</div>

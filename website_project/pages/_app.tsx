@@ -18,8 +18,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Locus Spatial Systems | Enterprise Spatial Intelligence</title>
-        <meta name="description" content="Turn indoor spaces into smart, actionable environments with Locus Spatial Systems — spatial mapping, asset tracking, and analytics." />
+        <title>Locus Spatial Systems | Automotive Asset Tracking & Production Line RTLS</title>
+        <meta name="description" content="Industrial asset tracking and facility automation for automotive manufacturing. Sub-meter BLE AoA, centimeter UWB, LoRaWAN GPS yard tracking, and mmWave radar lighting & occupancy automation." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
@@ -27,8 +27,8 @@ export default function App({ Component, pageProps }: AppProps) {
       
       <div className="announce">
           <b>NEW!</b>
-          <span><strong>Already running Locus?</strong> You may have spatial licences included and sitting idle. Let&apos;s find them now!</span>
-          <a href="/contact">Find my licence <span aria-hidden="true">›</span></a>
+          <span><strong>Automotive RTLS 4.0:</strong> Track production lines with BLE AoA &amp; UWB, manage finished yards with LoRaWAN GPS, and automate lighting with mmWave.</span>
+          <a href="/contact">Book Plant Assessment <span aria-hidden="true">›</span></a>
       </div>
       <Navigation currentPath={router.pathname} />
       

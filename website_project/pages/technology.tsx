@@ -5,8 +5,8 @@ export default function TechnologyPage() {
   return (
     <>
       <Head>
-        <title>Technology | Spatial Intelligence Platform</title>
-        <meta name="description" content="Multi-technology positioning platform supporting Bluetooth AoA, UWB, Wi-Fi RTT, BLE, Ultrasonic, and Wireless Mesh for any use case." />
+        <title>Automotive RTLS & Sensor Technologies | Locus Spatial Systems</title>
+        <meta name="description" content="Industrial positioning and automation stack: Sub-meter BLE AoA, centimeter UWB, long-range LoRaWAN GPS trackers, and 60/77GHz mmWave radar sensors." />
       </Head>
 
       <div className="bg-surface-neutral">
@@ -20,13 +20,13 @@ export default function TechnologyPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
             <span className="text-caption text-accent-cyan font-medium uppercase tracking-wider">
-              Technology
+              Industrial Hardware &amp; Sensors
             </span>
             <h1 className="text-display-1 text-white mt-4 mb-6">
-              Multi-Technology Platform
+              Industrial Tracking &amp; Automation Stack
             </h1>
             <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
-              Choose the right technology for your use case. Our platform supports multiple positioning technologies to deliver the perfect balance of accuracy and cost.
+              Engineered specifically for automotive assembly lines, outdoor holding yards, and supplier plants. Sub-meter BLE AoA, centimeter UWB, LoRaWAN GPS, and mmWave radar.
             </p>
           </div>
         </section>

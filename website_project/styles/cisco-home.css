@@ -62,9 +62,9 @@
 .cs-art--guest { left: 0; right: 0; bottom: 0; height: 300px; }
 .cs-art__bubble { position: absolute; left: 12%; top: 0; max-width: 220px; padding: 14px 16px; border-radius: 14px; background: var(--color-primary-navy); color: #fff; font-size: .85rem; animation: solFloat 5s ease-in-out infinite; }
 .cs-art__bubble b { display: block; color: var(--color-accent-bright); font-size: .75rem; }
-.cs-art__wifi { position: absolute; right: 12%; top: 20px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.cs-art__wifi svg { width: 84px; height: 84px; padding: 22px; border-radius: 50%; color: #fff; background: #0099ff; box-shadow: 0 0 0 14px rgba(0,153,255,.18), 0 0 0 30px rgba(0,153,255,.09); animation: pinPulse 2.6s ease-in-out infinite; }
-.cs-art__wifi em { font-style: normal; font-size: .85rem; font-weight: 700; color: #d97706; margin-top: 22px; }
+.cs-art__lorawan { position: absolute; right: 12%; top: 20px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.cs-art__lorawan svg { width: 84px; height: 84px; padding: 22px; border-radius: 50%; color: #fff; background: #0099ff; box-shadow: 0 0 0 14px rgba(0,153,255,.18), 0 0 0 30px rgba(0,153,255,.09); animation: pinPulse 2.6s ease-in-out infinite; }
+.cs-art__lorawan em { font-style: normal; font-size: .85rem; font-weight: 700; color: #d97706; margin-top: 22px; }
 .cs-art__person { position: absolute; bottom: 0; width: 150px; height: 200px; border-radius: 80px 80px 0 0; }
 .cs-art__person.p1 { left: 32%; background: linear-gradient(180deg, #f5c9a3 0 32%, #c47b4b 32%); }
 .cs-art__person.p2 { left: 52%; height: 220px; background: linear-gradient(180deg, #f1b98d 0 30%, #1e3a8a 30%); }
@@ -188,8 +188,8 @@
 .cs-tile:not(.cs-tile--wide) { min-height: 720px; }
 .cs-art--guest, .cs-art--care { left: 0; right: 0; bottom: 0; height: 260px; overflow: hidden; }
 .cs-art--guest .cs-art__bubble { left: 8%; top: 8px; }
-.cs-art--guest .cs-art__wifi { right: 8%; top: 4px; flex-direction: column-reverse; }
-.cs-art--guest .cs-art__wifi em { margin: 0 0 16px; }
+.cs-art--guest .cs-art__lorawan { right: 8%; top: 4px; flex-direction: column-reverse; }
+.cs-art--guest .cs-art__lorawan em { margin: 0 0 16px; }
 .cs-art--guest .cs-art__person { width: 120px; height: 150px; }
 .cs-art--guest .cs-art__person.p1 { left: 44%; } .cs-art--guest .cs-art__person.p2 { left: 58%; height: 170px; }
 .cs-art--care .cs-art__pulse { left: 30%; bottom: -60px; width: 220px; height: 220px; }

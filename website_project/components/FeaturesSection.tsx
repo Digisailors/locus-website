@@ -1,43 +1,43 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { MapPin, Compass, Activity, Zap, Shield, BarChart3, Router, Wifi } from 'lucide-react'
+import { MapPin, Navigation, Car, Shield, Zap, Radar } from 'lucide-react'
 
 const features = [
   {
     icon: MapPin,
     title: 'High-Precision Positioning',
-    description: 'Sub-meter accuracy (30cm - 50cm) using Bluetooth AoA, UWB, and WiFi RTT technologies.',
+    description: 'Sub-meter to centimeter accuracy (10cm - 30cm) using BLE AoA gateways and UWB precision anchors.',
     color: 'accent-cyan',
   },
   {
-    icon: Compass,
-    title: 'Indoor Navigation',
-    description: 'Turn-by-turn navigation with AR overlay, multi-floor routing, and accessibility support.',
-    color: 'success',
-  },
-  {
-    icon: Activity,
-    title: 'Real-Time Asset Tracking',
-    description: 'Live location of equipment, vehicles, and personnel with 24/7 monitoring and alerts.',
+    icon: Navigation,
+    title: 'Finished Yard Locating',
+    description: 'Multi-kilometer outdoor GPS tracking across holding lots using long-range LoRaWAN gateways.',
     color: 'info',
   },
   {
-    icon: Shield,
-    title: 'Geofencing & Safety',
-    description: 'Create virtual boundaries, safety zones, and automated emergency responses.',
-    color: 'warning',
-  },
-  {
-    icon: BarChart3,
-    title: 'Location Analytics',
-    description: 'Heatmaps, dwell time analysis, traffic patterns, and occupancy insights.',
+    icon: Car,
+    title: 'Real-Time Assembly WIP Tracking',
+    description: 'Live location of vehicle chassis, carrier dollies, and tools with automated MES station handoffs.',
     color: 'accent-cyan',
   },
   {
-    icon: Router,
-    title: 'Network as Sensor',
-    description: 'Transform existing WiFi/BLE infrastructure into a location-sensing network.',
-    color: 'success',
+    icon: Shield,
+    title: 'Geofencing & Tool Interlocks',
+    description: 'Enforce robotic exclusion zones and enable torque tools only inside verified bolt patterns.',
+    color: 'warning',
+  },
+  {
+    icon: Zap,
+    title: 'mmWave Lighting Automation',
+    description: 'Micro-motion radar detects workers and AGVs to automate high-bay lighting and cut power by 45%.',
+    color: 'accent-cyan',
+  },
+  {
+    icon: Radar,
+    title: 'Camera-Free Cell Occupancy',
+    description: 'Monitor workstation dwell times and operator safety with 100% camera-free privacy compliance.',
+    color: 'info',
   },
 ]
 

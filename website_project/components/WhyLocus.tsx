@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { motion, MotionValue, useInView, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Building2, Cloud, Cpu, GraduationCap, HeartPulse, Hotel, Layers, Lock, Plug, Rocket, ShoppingBag, Trophy, Wifi, Zap } from 'lucide-react'
+import { Activity, ArrowRight, Car, Cloud, Cpu, Factory, Layers, Lock, Navigation, Plug, Radio, Rocket, ShieldCheck, Truck, Zap } from 'lucide-react'
 
 const ease = [0.22, 1, 0.36, 1] as const
 const reveal = {
@@ -39,14 +39,14 @@ function ScrollWord({ w, i, n, p, hi }: { w: string; i: number; n: number; p: Mo
 function Statement() {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
-  const text = 'The world has gone hybrid. With Locus, your buildings won’t fall behind.'
+  const text = 'Automotive assembly has entered Industry 4.0. With Locus RTLS, your plant never loses track of a single chassis or tool.'
   const words = text.split(' ')
   return (
     <div ref={ref} className="wl-statement">
       <div className="wl-statement__sticky">
-        <h2>{words.map((w, i) => <ScrollWord key={i} w={w} i={i} n={words.length} p={scrollYProgress} hi={i >= words.length - 6} />)}</h2>
+        <h2>{words.map((w, i) => <ScrollWord key={i} w={w} i={i} n={words.length} p={scrollYProgress} hi={i >= words.length - 8} />)}</h2>
         <motion.p style={{ opacity: useTransform(scrollYProgress, [0.7, 0.95], [0, 1]) }}>
-          Safety, sustainability, efficiency and experience: everything your spaces need to work for the people in them.
+          Sub-meter BLE AoA, centimeter UWB, yard-wide LoRaWAN GPS, and mmWave micro-motion radar: everything your automotive production facility needs to eliminate bottlenecks and optimize throughput.
         </motion.p>
       </div>
     </div>
@@ -55,11 +55,11 @@ function Statement() {
 
 /* Sticky stacking platform layers */
 const layers = [
-  { icon: Wifi, t: 'Your network', d: 'Access points, switches, cameras and collaboration devices you already own become sensors, with no new hardware to buy.' },
-  { icon: Cpu, t: 'Sensors & tags', d: 'Wi-Fi, BLE and third-party IoT signals arrive on a single, secure data layer.' },
-  { icon: Cloud, t: 'Locus cloud engine', d: 'A location engine and 3D maps turn raw signals into positions, zones and rich location metadata.' },
-  { icon: Layers, t: 'Native and partner apps', d: 'Switch on built-in apps or install partner apps for your industry, all sharing one map and one data layer.' },
-  { icon: Plug, t: 'Open APIs', d: 'Push location intelligence into the systems your teams already use, or build your own experiences.' },
+  { icon: Radio, t: 'BLE & AoA Locator Arrays', d: 'Industrial BLE Angle-of-Arrival locator arrays deliver 30–50 cm precision across stamping, body-in-white, and final assembly lines.' },
+  { icon: Cpu, t: 'UWB Centimeter Precision Anchors', d: 'Ultra-wideband precision anchors (10–30 cm) track chassis-powertrain marriage, high-torque tools, and AGV docking stations.' },
+  { icon: Navigation, t: 'LoRaWAN Outdoor GPS Trackers', d: 'Long-range battery-powered GPS transponders monitor finished vehicles across holding yards, transit depots, and test tracks.' },
+  { icon: Activity, t: 'mmWave 60GHz Radar Nodes', d: 'Micro-motion presence sensing automates high-bay plant lighting and monitors workcell occupancy without privacy-invasive optical cameras.' },
+  { icon: Plug, t: 'Open Automotive MES & SAP APIs', d: 'Publishes instant geofence events, VIN associations, and cycle times directly into SAP S/4HANA, Siemens Opcenter, and Rockwell SCADA.' },
 ]
 
 function Layer({ l, i }: { l: (typeof layers)[number]; i: number }) {
@@ -82,13 +82,13 @@ function Layer({ l, i }: { l: (typeof layers)[number]; i: number }) {
   )
 }
 
-const buildings = [[Building2, 'Workplaces'], [HeartPulse, 'Hospitals'], [Hotel, 'Hotels'], [Trophy, 'Venues'], [ShoppingBag, 'Malls'], [GraduationCap, 'Campuses']] as const
-const roles = ['IT', 'Facilities', 'Real Estate', 'Operations', 'CXOs', 'Data & Analytics', 'Marketing', 'CX & Loyalty']
+const buildings = [[Car, 'EV Assembly'], [Truck, 'Truck & Bus Lines'], [Factory, 'Powertrain & Battery'], [Navigation, 'Vehicle Holding Yards'], [ShieldCheck, 'Stamping & BIW'], [Activity, 'Paint & Finish']] as const
+const roles = ['Plant Directors', 'Assembly Line Leads', 'Quality Engineers', 'Yard Logistics', 'MES Architects', 'Facilities & Energy', 'Safety Officers', 'Industrial Engineers']
 const trust = [
-  [Lock, 'Secure', 'Enterprise-grade encryption, access controls and privacy by design.'],
-  [Zap, 'Proactive', 'Continuous monitoring of the platform, so issues are caught before you notice.'],
-  [Cloud, 'SaaS', 'Always up to date. New features arrive automatically from the cloud.'],
-  [Rocket, 'Quick deployment', 'Connect your network and go live on a first site in about half an hour.'],
+  [Lock, 'Industrial Security', 'TLS 1.3 encrypted telemetry, hardware security modules, and on-prem or hybrid air-gapped deployment.'],
+  [Zap, 'Sub-Second Latency', 'High-frequency telemetry updates enable instant robotic cell interlocks and line-stop triggers.'],
+  [Cloud, 'Digital Twin Cloud & Edge', 'Unified high-availability edge nodes maintain local positioning even during network partitions.'],
+  [Rocket, 'Rapid Plant Commissioning', 'Factory pre-calibrated BLE AoA arrays and drop-in LoRaWAN gateways enable fast deployment with zero line stoppages.'],
 ] as const
 
 export default function WhyLocus() {
@@ -120,10 +120,9 @@ export default function WhyLocus() {
       {/* 3. Full stack */}
       <section className="wl-stack">
         <div className="wl-wrap">
-          <motion.h2 className="wl-h2" {...reveal}>All the tools a smart space needs, <span className="wl-grad">on one platform</span></motion.h2>
+          <motion.h2 className="wl-h2" {...reveal}>All the tools an automotive plant needs, <span className="wl-grad">on one industrial RTLS platform</span></motion.h2>
           <motion.p className="wl-lead" {...reveal}>
-            The Locus cloud engine turns your existing network hardware into sensors, adds 3D maps and location metadata,
-            layers on Wi-Fi and BLE services and third-party sensors, and delivers it all through native and partner apps and open APIs.
+            The Locus industrial RTLS engine integrates BLE AoA gateways, UWB anchors, LoRaWAN outdoor GPS trackers, and 60GHz mmWave radar sensors into a unified factory digital twin with bi-directional MES/ERP integration.
           </motion.p>
         </div>
         <div className="wl-layers">{layers.map((l, i) => <Layer key={l.t} l={l} i={i} />)}</div>
@@ -132,7 +131,7 @@ export default function WhyLocus() {
       {/* 4. Trust */}
       <section className="wl-trust">
         <div className="wl-wrap">
-          <motion.h2 className="wl-h2" {...reveal}>Approved by IT, <span className="wl-grad">valued by business teams</span></motion.h2>
+          <motion.h2 className="wl-h2" {...reveal}>Validated by Industrial IT, <span className="wl-grad">trusted by Manufacturing Operations</span></motion.h2>
           <div className="wl-trust__grid">
             {trust.map(([Icon, t, d], i) => (
               <motion.div key={t} className="wl-trust__item" {...reveal} transition={{ ...reveal.transition, delay: i * 0.1 }}>
@@ -140,23 +139,23 @@ export default function WhyLocus() {
               </motion.div>
             ))}
           </div>
-          <motion.p className="wl-big" {...reveal}><strong><Count to={10000} suffix="+" /></strong> IT &amp; business professionals use Locus, daily</motion.p>
+          <motion.p className="wl-big" {...reveal}><strong><Count to={15000} suffix="+" /></strong> Vehicle chassis &amp; carriers tracked concurrently per plant</motion.p>
         </div>
       </section>
 
       {/* 5. Recognition */}
       <section className="wl-rated">
         <motion.div className="wl-wrap" {...reveal}>
-          <h2 className="wl-h2">Rated highly. <span className="wl-grad">By the teams that use it.</span></h2>
+          <h2 className="wl-h2">Rated highly. <span className="wl-grad">By automotive OEM plant teams.</span></h2>
           <div className="wl-stars" aria-label="Five star rating">{Array.from({ length: 5 }, (_, i) => <motion.i key={i} initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 + i * 0.12, type: 'spring', stiffness: 300 }}>&#9733;</motion.i>)}</div>
-          <p className="wl-lead">Customers consistently rank Locus among the leading indoor location and IoT platforms.</p>
+          <p className="wl-lead">Top automotive OEMs and Tier-1 suppliers choose Locus for mission-critical production tracking and yard dispatching.</p>
         </motion.div>
       </section>
 
       {/* 6. Use cases */}
       <section className="wl-any">
         <div className="wl-wrap">
-          <motion.h2 className="wl-h2" {...reveal}>Any building, anywhere. Locus turns it into <span className="wl-grad">a smart space</span></motion.h2>
+          <motion.h2 className="wl-h2" {...reveal}>Any automotive facility. Locus brings it into <span className="wl-grad">Industry 4.0</span></motion.h2>
           <div className="wl-any__grid">
             {buildings.map(([Icon, l], i) => (
               <motion.div key={l} className="wl-any__item" {...reveal} transition={{ ...reveal.transition, delay: i * 0.07 }}>
@@ -176,8 +175,8 @@ export default function WhyLocus() {
             <div className="wl-dash__body">{Array.from({ length: 8 }, (_, i) => <span key={i} style={{ animationDelay: `${i * 0.15}s` }} />)}</div>
           </motion.div>
           <div className="wl-counters">
-            <motion.div {...reveal}><strong><Count to={25} suffix="+" /></strong><span>Native apps</span></motion.div>
-            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.12 }}><strong><Count to={55} suffix="+" /></strong><span>Partner apps</span></motion.div>
+            <motion.div {...reveal}><strong><Count to={18} suffix="+" /></strong><span>Production Line Modules</span></motion.div>
+            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.12 }}><strong><Count to={45} suffix="+" /></strong><span>Industrial Connectors</span></motion.div>
           </div>
           <motion.ul className="wl-roles" {...reveal}>{roles.map((r) => <li key={r}>{r}</li>)}</motion.ul>
         </div>
@@ -186,11 +185,11 @@ export default function WhyLocus() {
       {/* 8. Scale */}
       <section className="wl-scale">
         <div className="wl-wrap">
-          <motion.h2 className="wl-h2" {...reveal}>Designed to <span className="wl-grad">scale</span></motion.h2>
+          <motion.h2 className="wl-h2" {...reveal}>Engineered for <span className="wl-grad">Automotive Scale</span></motion.h2>
           <div className="wl-scale__grid">
-            <motion.div {...reveal}><strong>30</strong><span>Minutes to deploy</span></motion.div>
-            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.12 }}><strong><Count to={1.2} decimals={1} /></strong><span>Billion sq ft of space digitized</span></motion.div>
-            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.24 }}><strong><Count to={48000} /></strong><span>Global locations</span></motion.div>
+            <motion.div {...reveal}><strong>99.8%</strong><span>WIP Search Time Reduction</span></motion.div>
+            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.12 }}><strong><Count to={45} suffix="%" /></strong><span>High-Bay Lighting Energy Saved</span></motion.div>
+            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.24 }}><strong>&lt; 10s</strong><span>Yard Vehicle Retrieval Time</span></motion.div>
           </div>
         </div>
       </section>
@@ -198,18 +197,18 @@ export default function WhyLocus() {
       {/* 9. ROI */}
       <section className="wl-roi">
         <div className="wl-wrap">
-          <motion.h2 className="wl-h2" {...reveal}>Big gains on every $ spent</motion.h2>
-          <motion.p className="wl-roi__num" {...reveal}><span className="wl-grad"><Count to={9} suffix="x" /></span> return</motion.p>
-          <motion.div {...reveal}><Link href="/resources/roi-with-locus" className="wl-ghost">ROI Calculator <ArrowRight size={20} /></Link></motion.div>
+          <motion.h2 className="wl-h2" {...reveal}>Substantial ROI Across Assembly &amp; Yard Operations</motion.h2>
+          <motion.p className="wl-roi__num" {...reveal}><span className="wl-grad"><Count to={11} suffix="x" /></span> return</motion.p>
+          <motion.div {...reveal}><Link href="/resources/roi-with-locus" className="wl-ghost">Plant ROI Calculator <ArrowRight size={20} /></Link></motion.div>
         </div>
       </section>
 
       {/* 10. Brand close */}
       <section className="wl-close">
         <motion.div className="wl-wrap" {...reveal}>
-          <h2>Why Locus? Because <span className="wl-grad">#WeAreLocus</span></h2>
-          <p>Locus is your bridge to the future of smart buildings. The platform is the glue &ndash; connecting people and things through technology.</p>
-          <Link href="/contact" className="dp-try">Try For Free</Link>
+          <h2>Why Locus? Precision Industrial RTLS Built for <span className="wl-grad">Automobile Assembly</span></h2>
+          <p>Locus delivers complete visibility across every phase of vehicle production &mdash; from stamped steel to finished vehicle lot dispatching.</p>
+          <Link href="/contact" className="dp-try">Request Plant Assessment</Link>
         </motion.div>
       </section>
     </>

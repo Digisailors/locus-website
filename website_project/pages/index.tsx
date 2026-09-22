@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Spatial Intelligence Platform | Transform Your Space into Smart Space</title>
-        <meta name="description" content="Turn your buildings into smart spaces with AI-powered spatial intelligence. Indoor navigation, asset tracking, location analytics, and occupancy monitoring for enterprises." />
+        <title>Locus Spatial Systems | Automotive Asset Tracking & Production Line RTLS</title>
+        <meta name="description" content="Industrial asset tracking and facility automation for automotive manufacturing. Sub-meter BLE AoA, centimeter UWB, LoRaWAN GPS yard tracking, and mmWave radar lighting & occupancy automation." />
       </Head>
 
       <div className="bg-surface-neutral">

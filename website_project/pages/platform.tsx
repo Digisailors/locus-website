@@ -7,8 +7,8 @@ export default function PlatformPage() {
   return (
     <>
       <Head>
-        <title>Platform | Spatial Intelligence Platform</title>
-        <meta name="description" content="A complete spatial intelligence platform that turns your infrastructure into sensors. Real-time positioning, 3D mapping, and location analytics powered by AI." />
+        <title>Automotive RTLS &amp; Industrial Platform | Locus Spatial Systems</title>
+        <meta name="description" content="Industrial asset tracking, vehicle production line RTLS, finished yard management, and mmWave radar lighting automation platform." />
       </Head>
 
       <div className="bg-surface-neutral">
@@ -22,13 +22,13 @@ export default function PlatformPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
             <span className="text-caption text-accent-cyan font-medium uppercase tracking-wider">
-              The Platform
+              Industrial RTLS Platform
             </span>
             <h1 className="text-display-1 text-white mt-4 mb-6">
-              Everything You Need in One Platform
+              Automotive Asset Tracking &amp; Automation
             </h1>
             <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
-              A comprehensive spatial intelligence stack that turns your infrastructure into a smart sensor network.
+              Unified spatial intelligence for automotive assembly lines, finished vehicle holding yards, and mmWave radar factory automation.
             </p>
           </div>
         </section>

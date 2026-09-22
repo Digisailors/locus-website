@@ -1,54 +1,54 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wifi, Bluetooth, Radio, Waves, Signal, Grid3x3, Layers } from 'lucide-react'
+import { Bluetooth, Radio, Navigation, Radar, Signal, Grid3x3, Layers } from 'lucide-react'
 
 const technologies = [
   {
     icon: Bluetooth,
-    name: 'Bluetooth AoA',
-    description: 'Angle of Arrival technology provides sub-meter (30cm) accuracy using existing BLE infrastructure.',
+    name: 'Bluetooth AoA (Angle of Arrival)',
+    description: 'Multi-antenna gateway arrays deliver 30–50 cm positioning for vehicle bodies, carrier dollies, and AGVs on the factory floor.',
     accuracy: '30-50cm',
-    range: 'Up to 100m',
+    range: 'Up to 80m',
     color: 'bg-blue-500',
   },
   {
     icon: Radio,
     name: 'UWB (Ultra-Wideband)',
-    description: 'Ultra-precise positioning with centimeter-level accuracy for high-value asset tracking.',
+    description: 'Centimeter-level precision for mission-critical chassis marriage lines, robotic cells, and smart torque tool interlocks.',
     accuracy: '10-30cm',
-    range: 'Up to 200m',
+    range: 'Up to 150m',
     color: 'bg-purple-500',
   },
   {
-    icon: Wifi,
-    name: 'Wi-Fi RTT',
-    description: 'Round Trip Time positioning using existing Wi-Fi access points for cost-effective deployment.',
-    accuracy: '1-2m',
-    range: 'Site-wide',
-    color: 'bg-green-500',
+    icon: Navigation,
+    name: 'LoRaWAN GPS Trackers',
+    description: 'Long-range outdoor vehicle tracking across multi-acre holding yards, testing tracks, and railheads without cellular SIM fees.',
+    accuracy: '<2m',
+    range: 'Up to 15km',
+    color: 'bg-sky-500',
   },
   {
-    icon: Signal,
-    name: 'BLE Positioning',
-    description: 'Standard Bluetooth Low Energy beacons for simple, battery-efficient navigation solutions.',
-    accuracy: '2-5m',
-    range: 'Up to 70m',
-    color: 'bg-blue-400',
-  },
-  {
-    icon: Waves,
-    name: 'Ultrasonic',
-    description: 'High-frequency audio signals for precise indoor positioning without radio interference.',
-    accuracy: '10cm',
-    range: '10-20m',
+    icon: Radar,
+    name: 'mmWave Radar Sensors (60/77 GHz)',
+    description: 'Micro-motion radar detects human breathing and movement for automated high-bay lighting and camera-free cell occupancy.',
+    accuracy: '<50ms latency',
+    range: 'Up to 25m',
     color: 'bg-cyan-500',
   },
   {
-    icon: Grid3x3,
-    name: 'Wireless Mesh',
-    description: 'Self-healing mesh network of sensors for comprehensive coverage in complex environments.',
+    icon: Signal,
+    name: 'Industrial BLE Positioning',
+    description: 'Ultra-low-power Bluetooth tags for tooling carts, parts bins, and returnable packaging with 5+ year battery life.',
     accuracy: '1-3m',
-    range: 'Unlimited',
+    range: 'Up to 100m',
+    color: 'bg-blue-400',
+  },
+  {
+    icon: Grid3x3,
+    name: 'Ruggedized Industrial Mesh',
+    description: 'IP67/IP69K enclosures and high-temperature tags built to endure stamping presses, weld sparks, and paint shop ovens.',
+    accuracy: 'Harsh RF Immune',
+    range: 'Plant-wide',
     color: 'bg-orange-500',
   },
 ]
@@ -57,22 +57,22 @@ const architectureLayers = [
   {
     level: 'Layer 1',
     title: 'Sensors & Infrastructure',
-    items: ['Bluetooth Beacons', 'UWB Anchors', 'Wi-Fi Access Points', 'Ultrasonic Sensors'],
+    items: ['BLE AoA Gateways', 'UWB Anchors & Tags', 'LoRaWAN GPS Devices', 'mmWave Radar Sensors'],
   },
   {
     level: 'Layer 2', 
-    title: 'Edge Processing',
-    items: ['Signal Processing', 'Triangulation', 'Filtering', 'Localization'],
+    title: 'Industrial Edge',
+    items: ['Signal Filtering', 'AoA & TDoA Positioning', 'Micro-motion Processing', 'PLC & Tool Bus Controllers'],
   },
   {
     level: 'Layer 3',
-    title: 'Cloud Platform',
-    items: ['Position Engine', 'Analytics', '3D Mapping', 'API Gateway'],
+    title: 'Spatial Cloud & Twin',
+    items: ['Real-Time Position Engine', '3D Plant Digital Twin', 'Takt Time Analytics', 'Lighting Automation Rules'],
   },
   {
     level: 'Layer 4',
-    title: 'Applications',
-    items: ['Navigation', 'Tracking', 'Analytics', 'Integrations'],
+    title: 'Automotive Applications',
+    items: ['Assembly Line RTLS', 'Finished Yard Dispatch', 'Torque Tool Interlocks', 'Siemens & SAP MES Connectors'],
   },
 ]
 
